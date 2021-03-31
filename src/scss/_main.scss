@@ -1,0 +1,67 @@
+body {
+  font-style: normal;
+  color: black;
+}
+
+section {
+  transition: 0.4s ease-in-out;
+}
+
+main {
+  overflow: hidden;
+}
+
+.hide {
+  animation: fade-out 1s ease-in-out forwards !important;
+}
+
+.disabled {
+  display: none;
+}
+
+.container {
+  @media ($ma-xs) {
+    max-width: none;
+    padding: 0 0.75rem;
+  }
+
+  @media ($m-xs) {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  @media ($m-s) {
+    max-width: 720px;
+  }
+
+  @media ($m-m) {
+    max-width: 960px;
+  }
+
+  @media ($m-l) {
+    max-width: 1140px;
+  }
+
+  @media ($m-xl) {
+    max-width: 1320px;
+  }
+
+  &--no-mw {
+    max-width: none;
+    padding: 0;
+  }
+}
+
+.svg-icon {
+  width: 100%;
+  height: 100%;
+
+  fill: currentColor;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
