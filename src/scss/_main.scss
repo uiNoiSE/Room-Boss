@@ -22,7 +22,7 @@ main {
 .container {
   @media ($ma-xs) {
     max-width: none;
-    padding: 0 0.75rem;
+    padding: 0 24px;
   }
 
   @media ($m-xs) {
