@@ -1,4 +1,5 @@
 body {
+  font-family: $Gilroy;
   font-style: normal;
   color: black;
 }
@@ -64,4 +65,46 @@ img {
   height: 100%;
 
   object-fit: contain;
+}
+
+aside {
+  height: 100vh;
+
+  & > .container {
+    height: 100%;
+    
+    background: $g-bg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      color: $c-black;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 34px;
+      text-align: center;
+      text-decoration: none;
+
+      &:not(:last-child) {
+        margin-bottom: 28px;
+      }
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 230px;
+      height: 48px;
+
+      background-color: $c-orange;
+      color: $c-white;
+      font-size: 18px;
+      line-height: 24px;
+
+      text-align: center;
+    }
+  }
 }
