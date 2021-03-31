@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  if (isMobile) {
-    break
-  } else {
+  if (!isMobile) {
     function parallax(event) {
       setTimeout(() => {
         this.querySelectorAll(".js-layer").forEach((layer) => {
