@@ -1,0 +1,67 @@
+.bubble-wrap {
+	position: absolute;
+
+	width: fit-content;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	background: linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(235, 235, 234, 1) 100%);
+	border-radius: 15px;
+	box-shadow: 0px 2.06089px 51.5222px rgba(128, 128, 128, 0.3);
+}
+
+.bubble {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin: 3px;
+	padding: 4px 8px;
+
+	border-radius: inherit;
+	background: linear-gradient(102.05deg, #f7f7f7 12.61%, rgba(242, 242, 242, 0.75) 91.76%);
+
+	&s {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		width: 100%;
+	}
+
+	&-rectangle {
+		& > img {
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+	&-square {
+		&--big {
+			border-radius: 30px;
+			padding: 20px;
+
+			& > img {
+				width: 60px;
+				height: 60px;
+			}
+		}
+
+		&--small {
+			padding: 7px;
+
+			& > img {
+				width: 26px;
+				height: 26px;
+			}
+		}
+	}
+
+	& > span {
+		margin-left: 8px;
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 14px;
+	}
+}

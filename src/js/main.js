@@ -1,3 +1,5 @@
+import Inputmask from "inputmask";
+
 document.addEventListener("DOMContentLoaded", function () {
   var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   if (!isMobile) {
@@ -12,25 +14,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     document.addEventListener("mousemove", parallax);
   }
+
+
+
+  var forEach = function (t, o, r) { if ("[object Object]" === Object.prototype.toString.call(t)) for (var c in t) Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t); else for (var e = 0, l = t.length; l > e; e++)o.call(r, t[e], e, t) };
+
+  var hamburgers = document.querySelectorAll(".nav__burger");
+
+  if (hamburgers.length > 0) {
+    forEach(hamburgers, function (hamburger) {
+      hamburger.addEventListener("click", function () {
+        this.classList.toggle("is-active");
+        document.querySelector('aside').classList.toggle('_active');
+      }, false);
+    });
+  }
+
+  let logo = document.querySelector('header > .container > .logo');
+
+  logo.addEventListener('click', function () {
+    document.querySelector('aside').classList.remove('_active');
+    document.querySelector(".nav__burger").classList.remove('is-active');
+  })
+
+  let phone = document.querySelectorAll(".js-phone");
+  for (let item of phone) {
+    Inputmask("+9 999 999 99 99", { placeholder: '' }).mask(item);
+  }
+
 });
-
-
-var forEach = function (t, o, r) { if ("[object Object]" === Object.prototype.toString.call(t)) for (var c in t) Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t); else for (var e = 0, l = t.length; l > e; e++)o.call(r, t[e], e, t) };
-
-var hamburgers = document.querySelectorAll(".nav__burger");
-
-if (hamburgers.length > 0) {
-  forEach(hamburgers, function (hamburger) {
-    hamburger.addEventListener("click", function () {
-      this.classList.toggle("is-active");
-      document.querySelector('aside').classList.toggle('_active');
-    }, false);
-  });
-}
-
-let logo = document.querySelector('header > .logo');
-
-logo.addEventListener('click', function () {
-  document.querySelector('aside').classList.remove('_active');
-  document.querySelector(".nav__burger").classList.remove('is-active');
-})

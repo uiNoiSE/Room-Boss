@@ -1,0 +1,38 @@
+.intro {
+	padding-top: 72px;
+	background: $g-bg;
+
+	&__text {
+		& > h1 {
+			margin: 75px 0 24px;
+
+			font-weight: 600;
+			font-size: 28px;
+			line-height: 33px;
+		}
+
+		& > h2 {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 22px;
+		}
+	}
+
+	& > .container {
+		display: flex;
+
+		& > .bubbles {
+			& > .bubble-wrap {
+				&:nth-child(1) {
+					top: 72px;
+					left: 27px;
+				}
+
+				&:nth-child(2) {
+					top: 127px;
+					left: 253px;
+				}
+			}
+		}
+	}
+}

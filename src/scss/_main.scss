@@ -15,9 +15,9 @@ section {
   transition: 0.4s ease-in-out;
 }
 
-main {
-  overflow: hidden;
-}
+// main {
+//   overflow: hidden;
+// }
 
 .hide {
   animation: fade-out 1s ease-in-out forwards !important;
@@ -136,5 +136,29 @@ aside {
     line-height: 24px;
 
     text-align: center;
+  }
+}
+
+form.popup {
+  margin-top: 100px;
+
+  & > input {
+    width: 242px;
+    border: none;
+    border-bottom: 2px solid $c-orange-light;
+    transition: 0.4s ease;
+    font-size: 20px;
+    line-height: 28px;
+    padding-bottom: 4px;
+
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid $c-orange;
+    }
+
+    &::placeholder {
+      font-family: $Gilroy;
+      font-weight: 400;
+    }
   }
 }
