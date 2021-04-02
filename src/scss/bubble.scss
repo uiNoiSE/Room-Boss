@@ -9,6 +9,10 @@
 	background: linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(235, 235, 234, 1) 100%);
 	border-radius: 15px;
 	box-shadow: 0px 2.06089px 51.5222px rgba(128, 128, 128, 0.3);
+
+	&--big-br {
+		border-radius: 30px;
+	}
 }
 
 .bubble {
