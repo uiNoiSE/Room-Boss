@@ -1,9 +1,13 @@
 .intro {
+	height: 100vh;
 	padding-top: 72px;
 	background: $g-bg;
 
 	&__text {
+		margin-bottom: 24px;
+
 		& > h1 {
+			width: 272px;
 			margin: 75px 0 24px;
 
 			font-weight: 600;
@@ -12,6 +16,8 @@
 		}
 
 		& > h2 {
+			width: 272px;
+
 			font-weight: 400;
 			font-size: 16px;
 			line-height: 22px;
@@ -20,17 +26,40 @@
 
 	& > .container {
 		display: flex;
+		flex-direction: column;
 
 		& > .bubbles {
+			$container-padding: 24px;
+
 			& > .bubble-wrap {
 				&:nth-child(1) {
 					top: 72px;
-					left: 27px;
+					left: $container-padding;
 				}
 
 				&:nth-child(2) {
 					top: 127px;
-					left: 253px;
+					right: $container-padding;
+				}
+
+				&:nth-child(3) {
+					top: 435px;
+					left: $container-padding;
+				}
+
+				&:nth-child(4) {
+					top: 435px;
+					right: $container-padding;
+				}
+
+				&:nth-child(5) {
+					top: 501px;
+					left: $container-padding;
+				}
+
+				&:nth-child(6) {
+					top: 501px;
+					right: $container-padding;
 				}
 			}
 		}

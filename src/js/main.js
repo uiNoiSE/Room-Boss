@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var forEach = function (t, o, r) { if ("[object Object]" === Object.prototype.toString.call(t)) for (var c in t) Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t); else for (var e = 0, l = t.length; l > e; e++)o.call(r, t[e], e, t) };
 
-  var hamburgers = document.querySelectorAll(".nav__burger");
+  var hamburgers = document.querySelectorAll(".hamburger");
 
   if (hamburgers.length > 0) {
     forEach(hamburgers, function (hamburger) {
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   logo.addEventListener('click', function () {
     document.querySelector('aside').classList.remove('_active');
-    document.querySelector(".nav__burger").classList.remove('is-active');
+    document.querySelector(".hamburger").classList.remove('is-active');
   })
 
   let phone = document.querySelectorAll(".js-phone");
