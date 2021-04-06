@@ -37,6 +37,13 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".hamburger").classList.remove('is-active');
   })
 
+  let card = document.querySelectorAll('.cards__toggle');
+  forEach(card, function (card) {
+    card.addEventListener('click', function () {
+      this.classList.toggle('cards__toggle--active');
+    })
+  })
+
   let phone = document.querySelectorAll(".js-phone");
   for (let item of phone) {
     Inputmask("+9 999 999 99 99", { placeholder: '' }).mask(item);
