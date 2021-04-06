@@ -1,0 +1,20 @@
+.modules {
+	& > .container {
+		padding: 40px 0 48px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.cards__card-bg {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.cards__toggle {
+			&--active {
+				background: $c-green;
+			}
+		}
+	}
+}
