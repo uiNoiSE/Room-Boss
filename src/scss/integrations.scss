@@ -4,6 +4,37 @@
 	align-items: center;
 	background: $g-bg-reverse;
 
+	& > .container {
+		position: relative;
+
+		.bubbles {
+			position: relative;
+			top: 0;
+			left: auto;
+
+			& > .circle,
+			.square {
+				position: absolute;
+			}
+
+			& > .circle {
+				width: 50px;
+			}
+
+			* {
+				&:nth-child(1) {
+					top: 50px;
+					right: 0px;
+				}
+
+				&:nth-child(2) {
+					top: 40px;
+					right: -7px;
+				}
+			}
+		}
+	}
+
 	.bubble-wrap {
 		border-radius: 10px;
 

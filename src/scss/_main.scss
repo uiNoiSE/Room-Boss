@@ -5,6 +5,11 @@ body {
   color: black;
 }
 
+._burger-active {
+  height: 10vh;
+  overflow: hidden;
+}
+
 .wrap {
   width: 100%;
   position: relative;
@@ -104,11 +109,15 @@ form.popup {
   background-color: $c-orange-dark;
   text-decoration: none;
 
+  transition: 0.4s cubic-bezier(0.28, 0, 0.1, 1);
+
   & > span {
     color: $c-white;
     font-size: 18px;
     line-height: 24px;
     text-align: center;
+
+    pointer-events: none;
   }
 
   @media (hover: hover) and (pointer: fine) {
@@ -119,6 +128,43 @@ form.popup {
 
   &:active {
     background-color: $c-orange;
+    transition: 0.4s cubic-bezier(0.28, 0, 0.1, 1);
+  }
+
+  &--hollow {
+    border: 2px solid $c-orange;
+    background-color: #f7f7f7;
+
+    transition: 0.4s cubic-bezier(0.28, 0, 0.1, 1);
+
+    & > span {
+      margin-bottom: 0;
+      color: $c-orange;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+
+      transition: 0.4s cubic-bezier(0.28, 0, 0.1, 1);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: $c-white;
+        transition: 0.1s cubic-bezier(0.28, 0, 0.1, 1);
+      }
+    }
+
+    &:active {
+      background-color: $c-orange;
+      transition: 0.1s cubic-bezier(0.28, 0, 0.1, 1);
+
+      & > span {
+        color: $c-white;
+
+        transition: 0.4s cubic-bezier(0.28, 0, 0.1, 1);
+        
+      }
+    }
   }
 }
 

@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
       hamburger.addEventListener("click", function () {
         this.classList.toggle("is-active");
         document.querySelector('aside').classList.toggle('_active');
+        document.querySelector('body').classList.toggle('_burger-active');
       }, false);
     });
   }
