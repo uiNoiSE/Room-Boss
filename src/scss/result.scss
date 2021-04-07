@@ -1,0 +1,38 @@
+.result {
+	& > .container {
+		h2 {
+			margin-top: 16px;
+		}
+
+		p {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 22px;
+		}
+
+		.bubbles {
+			position: relative;
+			display: grid;
+			row-gap: 20px;
+
+			.bubble-wrap {
+				position: static;
+				&:nth-child(1) {
+					justify-self: flex-end;
+				}
+			}
+		}
+	}
+
+	hr {
+		margin-top: 0;
+		margin-bottom: 16px;
+	}
+
+	picture {
+		& > * {
+			margin-top: -60px;
+			margin-bottom: -90px;
+		}
+	}
+}

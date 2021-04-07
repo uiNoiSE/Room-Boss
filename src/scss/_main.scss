@@ -68,7 +68,8 @@ section {
   fill: currentColor;
 }
 
-img {
+img,
+picture {
   width: 100%;
   height: 100%;
 
@@ -162,7 +163,6 @@ form.popup {
         color: $c-white;
 
         transition: 0.4s cubic-bezier(0.28, 0, 0.1, 1);
-        
       }
     }
   }
