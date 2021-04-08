@@ -53,10 +53,21 @@
     margin-bottom: 16px;
   }
 
-  picture {
-    & > * {
-      margin-top: -60px;
-      margin-bottom: -90px;
+  &__pic {
+    picture {
+      &:nth-child(1) {
+        & > picture > * {
+          margin-top: -50px;
+          margin-bottom: -90px;
+        }
+      }
+
+      &:nth-child(2) {
+        & > picture > * {
+          margin-top: 20px;
+          margin-bottom: 0;
+        }
+      }
     }
   }
 }
