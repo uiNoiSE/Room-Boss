@@ -1,6 +1,7 @@
 import Inputmask from "inputmask";
 
 document.addEventListener("DOMContentLoaded", function () {
+  // check. If mobile(false) - parallax will work
   var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   if (!isMobile) {
     function parallax(event) {
@@ -16,42 +17,43 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
+  // burger logics
+  let body = document.querySelector('body');
+  let aside = document.querySelector('aside');
+  let hamburger = document.querySelector(".hamburger");
+  let forEach = function (t, o, r) { if ("[object Object]" === Object.prototype.toString.call(t)) for (var c in t) Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t); else for (var e = 0, l = t.length; l > e; e++)o.call(r, t[e], e, t) };
 
-  var forEach = function (t, o, r) { if ("[object Object]" === Object.prototype.toString.call(t)) for (var c in t) Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t); else for (var e = 0, l = t.length; l > e; e++)o.call(r, t[e], e, t) };
+  hamburger.addEventListener("click", function () {
+    this.classList.toggle("is-active");
+    if (!aside.classList.contains('_active')) {
+      aside.classList.toggle('_active');
+      body.classList.add('_burger-active');
+    } else {
+      body.classList.remove('_burger-active');
+      aside.classList.toggle('_active');
+    }
+  }, false);
 
-  var hamburgers = document.querySelectorAll(".hamburger");
-
-  if (hamburgers.length > 0) {
-    forEach(hamburgers, function (hamburger) {
-      hamburger.addEventListener("click", function () {
-        this.classList.toggle("is-active");
-        document.querySelector('aside').classList.toggle('_active');
-        if (!document.querySelector('body').classList.contains('_burger-active')) {
-          document.querySelector('body').classList.toggle('_burger-active');
-        } else {
-          document.querySelector('body').classList.toggle('_burger-active');
-        }
-      }, false);
-    });
-  }
-
-  let logo = document.querySelector('header > .container > .logo');
-
-  logo.addEventListener('click', function () {
-    document.querySelector('aside').classList.remove('_active');
-    document.querySelector(".hamburger").classList.remove('is-active');
+  let headerLogo = document.querySelector('header > .container > .logo');
+  headerLogo.addEventListener('click', function () {
+    aside.classList.remove('_active');
+    hamburger.classList.remove('is-active');
   })
 
+
+  // phone number formater
+  let phone = document.querySelectorAll(".js-phone");
+  for (let item of phone) {
+    Inputmask("+9 999 999 99 99", { placeholder: '' }).mask(item);
+  }
+
+
+  // card togglers
   let card = document.querySelectorAll('.cards__toggle');
   forEach(card, function (card) {
     card.addEventListener('click', function () {
       this.classList.toggle('cards__toggle--active');
     })
   })
-
-  let phone = document.querySelectorAll(".js-phone");
-  for (let item of phone) {
-    Inputmask("+9 999 999 99 99", { placeholder: '' }).mask(item);
-  }
 
 });

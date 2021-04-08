@@ -107,19 +107,16 @@ form.popup {
   width: 230px;
   height: 48px;
 
-  background-color: $c-orange-dark;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: $c-white;
+  text-align: center;
   text-decoration: none;
 
+  background-color: $c-orange-dark;
+
   transition: 0.4s cubic-bezier(0.28, 0, 0.1, 1);
-
-  & > span {
-    color: $c-white;
-    font-size: 18px;
-    line-height: 24px;
-    text-align: center;
-
-    pointer-events: none;
-  }
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
@@ -133,37 +130,33 @@ form.popup {
   }
 
   &--hollow {
+    color: $c-orange;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+
     border: 2px solid $c-orange;
     background-color: #f7f7f7;
 
     transition: 0.4s cubic-bezier(0.28, 0, 0.1, 1);
 
-    & > span {
-      margin-bottom: 0;
-      color: $c-orange;
-      font-size: 18px;
-      line-height: 24px;
-      text-align: center;
-
-      transition: 0.4s cubic-bezier(0.28, 0, 0.1, 1);
-    }
-
     @media (hover: hover) and (pointer: fine) {
       &:hover {
-        background-color: $c-white;
+        color: $c-white;
+
+        background: $c-orange-light;
+
         transition: 0.1s cubic-bezier(0.28, 0, 0.1, 1);
       }
     }
 
     &:active {
+      color: $c-white;
+
       background-color: $c-orange;
       transition: 0.1s cubic-bezier(0.28, 0, 0.1, 1);
 
-      & > span {
-        color: $c-white;
-
-        transition: 0.4s cubic-bezier(0.28, 0, 0.1, 1);
-      }
+      transition: 0.4s cubic-bezier(0.28, 0, 0.1, 1);
     }
   }
 }

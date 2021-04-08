@@ -1,38 +1,62 @@
 .result {
-	& > .container {
-		h2 {
-			margin-top: 16px;
-		}
+  & > .container {
+    h2 {
+      margin-top: 16px;
+    }
 
-		p {
-			font-weight: 400;
-			font-size: 16px;
-			line-height: 22px;
-		}
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+    }
 
-		.bubbles {
-			position: relative;
-			display: grid;
-			row-gap: 20px;
+    .bubbles {
+      position: relative;
+      display: grid;
+      row-gap: 20px;
 
-			.bubble-wrap {
-				position: static;
-				&:nth-child(1) {
-					justify-self: flex-end;
-				}
-			}
-		}
-	}
+      & > .bubble-wrap {
+        &:nth-child(1) {
+          .bubbles--decorative {
+            top: -11px;
+            left: 98px;
+          }
+        }
 
-	hr {
-		margin-top: 0;
-		margin-bottom: 16px;
-	}
+        &:nth-child(2) {
+          .bubbles--decorative {
+            top: 41px;
+            left: 147px;
+          }
+        }
+      }
 
-	picture {
-		& > * {
-			margin-top: -60px;
-			margin-bottom: -90px;
-		}
-	}
+      .bubble {
+        position: relative;
+      }
+
+      .bubbles--decorative {
+        position: absolute;
+      }
+
+      .bubble-wrap {
+        position: static;
+        &:nth-child(1) {
+          justify-self: flex-end;
+        }
+      }
+    }
+  }
+
+  hr {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  picture {
+    & > * {
+      margin-top: -60px;
+      margin-bottom: -90px;
+    }
+  }
 }

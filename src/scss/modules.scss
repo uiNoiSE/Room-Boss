@@ -1,20 +1,25 @@
 .modules {
-	& > .container {
-		padding: 40px 0 48px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+  & > .container {
+    padding-top: 40px;
+    padding-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-		.cards__card-bg {
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
+    .cards {
+      row-gap: 26px;
 
-		.cards__toggle {
-			&--active {
-				background: $c-green;
-			}
-		}
-	}
+      &__card {
+        width: 282px;
+
+        row-gap: 11px;
+      }
+
+      &__toggle {
+        &--active {
+          background: $c-green;
+        }
+      }
+    }
+  }
 }

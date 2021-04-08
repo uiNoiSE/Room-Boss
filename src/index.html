@@ -13,13 +13,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="preload" crossorigin href="assets/fonts/gilroy-regular.woff2" as="font" />
-  <link rel="preload" crossorigin href="assets/fonts/gilroy-semibold.woff2" as="font" />
+  <link rel="prefetch" href="assets/fonts/gilroy-regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="prefetch" href="assets/fonts/gilroy-semibold.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="prefetch" href="assets/fonts/gilroy-bold.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet preload prefetch" as="style" href="assets/css/styles.css" />
 
   <meta name="msapplication-TileColor" content="#000000" />
-
   <link rel="icon" type="image/png" sizes="16x16" href="assets/fav/favicon-16.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/fav/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="152x152" href="assets/fav/favicon-152.png" />
@@ -153,7 +153,7 @@
           </div>
 
           <a class="button" href="javascript:void(0);" role="link" ontouchstart="">
-            <span>Заказать сайт</span>
+            Заказать сайт
           </a>
 
         </div>
@@ -304,265 +304,244 @@
 
         </div>
 
-        <div class="cards-wrap">
-          <div class="cards">
+        <div class="cards">
 
-            <div class="cards__card-bg">
+          <div class="cards__card-bg">
 
-              <div class="cards__card">
-                <div class="cards__toggle"></div>
-                <div class="cards__headline">
-                  Каталог квартир по параметрам
-                </div>
-                <div class="cards__hr"></div>
-                <div class="cards__text">
-                  Продуманный каталог подбора квартир в жилом комплексе
-                </div>
+            <div class="cards__card">
+              <div class="cards__toggle"></div>
+              <div class="cards__headline">
+                Каталог квартир по параметрам
               </div>
-
-            </div>
-
-            <div class="cards__card-bg">
-
-              <div class="cards__card">
-                <div class="cards__toggle"></div>
-                <div class="cards__headline">
-                  3D тур
-                </div>
-                <div class="cards__hr"></div>
-                <div class="cards__text">
-                  Эффектная демонстрация вашей недвижимости потенциальным покупателям
-                </div>
-                <div class="cards__img">
-                  <div class="bubble-wrap bubble-wrap-square--small">
-                    <div class="bubble">
-                      <img src="assets/img/icons/houses.webp" alt="">
-                    </div>
-                  </div>
-                </div>
+              <hr class="cards__hr">
+              <div class="cards__text">
+                Продуманный каталог подбора квартир в жилом комплексе
               </div>
-
             </div>
-
-            <div class="cards__card-bg">
-
-              <div class="cards__card">
-                <div class="cards__toggle"></div>
-                <div class="cards__headline">
-                  Шахматка выбора квартир
-                </div>
-                <div class="cards__hr"></div>
-                <div class="cards__text">
-                  Удобный формат выбора квартир по генплану или фасаду здания
-                </div>
-              </div>
-
-            </div>
-
-            <div class="cards__card-bg">
-
-              <div class="cards__card">
-                <div class="cards__toggle"></div>
-                <div class="cards__headline">
-                  Форма обратного звонка с видео
-                </div>
-                <div class="cards__hr"></div>
-                <div class="cards__text">
-                  Форма обратного звонка с видеорядом для большего вовлечения
-                </div>
-              </div>
-
-            </div>
-
-            <div class="cards__card-bg">
-
-              <div class="cards__card">
-                <div class="cards__toggle"></div>
-                <div class="cards__headline">
-                  Каталог коммерческой недвижимости
-                </div>
-                <div class="cards__hr"></div>
-                <div class="cards__text">
-                  Каталог недвижимости для бизнеса с визуальный выбором и параметрическим фильтром
-                </div>
-              </div>
-
-            </div>
-
-            <div class="cards__card-bg">
-
-              <div class="cards__card">
-                <div class="cards__toggle"></div>
-                <div class="cards__headline">
-                  Чат-бот
-                </div>
-                <div class="cards__hr"></div>
-                <div class="cards__text">
-                  Искусственной интеллект для автоматизируемого общения с вашими потенциальными клиентами
-                </div>
-                <div class="cards__img">
-                  <div class="bubble-wrap bubble-wrap-square--small">
-                    <div class="bubble">
-                      <img src="assets/img/icons/speech-balloon.webp" alt="">
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="cards__card-bg">
-
-              <div class="cards__card">
-                <div class="cards__toggle"></div>
-                <div class="cards__headline">
-                  Ипотечный калькулятор
-                </div>
-                <div class="cards__hr"></div>
-                <div class="cards__text">
-                  Ипотечный калькулятор в несколько шагов с удобной навигацией и заявкой на расчет
-                </div>
-                <div class="cards__img">
-                  <div class="bubble-wrap bubble-wrap-square--small">
-                    <div class="bubble">
-                      <img src="assets/img/icons/coin.webp" alt="">
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="cards__card-bg">
-
-              <div class="cards__card">
-                <div class="cards__toggle"></div>
-                <div class="cards__headline">
-                  Модуль для обзора объекта 360°
-                </div>
-                <div class="cards__hr"></div>
-                <div class="cards__text">
-                  Возможность размещения на сайте обзора вашего объекта в режиме 360°
-                </div>
-              </div>
-
-            </div>
-
-            <div class="cards__card-bg">
-
-              <div class="cards__card">
-                <div class="cards__toggle"></div>
-                <div class="cards__headline">
-                  Модуль онлайн камер на объекте
-                </div>
-                <div class="cards__hr"></div>
-                <div class="cards__text">
-                  Удобный формат обзора стадии строительства объекта в режиме онлайн
-                </div>
-              </div>
-
-            </div>
-
-
 
           </div>
+
+          <div class="cards__card-bg">
+
+            <div class="cards__card">
+              <div class="cards__toggle"></div>
+              <div class="cards__headline">
+                3D тур
+              </div>
+              <hr class="cards__hr">
+              <div class="cards__text">
+                Эффектная демонстрация вашей недвижимости потенциальным покупателям
+              </div>
+              <div class="cards__img">
+                <div class="bubble-wrap bubble-wrap-square--small">
+                  <div class="bubble">
+                    <img src="assets/img/icons/houses.webp" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="cards__card-bg">
+
+            <div class="cards__card">
+              <div class="cards__toggle"></div>
+              <div class="cards__headline">
+                Шахматка выбора квартир
+              </div>
+              <hr class="cards__hr">
+              <div class="cards__text">
+                Удобный формат выбора квартир по генплану или фасаду здания
+              </div>
+            </div>
+
+          </div>
+
+          <div class="cards__card-bg">
+
+            <div class="cards__card">
+              <div class="cards__toggle"></div>
+              <div class="cards__headline">
+                Форма обратного звонка с видео
+              </div>
+              <hr class="cards__hr">
+              <div class="cards__text">
+                Форма обратного звонка с видеорядом для большего вовлечения
+              </div>
+            </div>
+
+          </div>
+
+          <div class="cards__card-bg">
+
+            <div class="cards__card">
+              <div class="cards__toggle"></div>
+              <div class="cards__headline">
+                Каталог коммерческой недвижимости
+              </div>
+              <hr class="cards__hr">
+              <div class="cards__text">
+                Каталог недвижимости для бизнеса с визуальный выбором и параметрическим фильтром
+              </div>
+            </div>
+
+          </div>
+
+          <div class="cards__card-bg">
+
+            <div class="cards__card">
+              <div class="cards__toggle"></div>
+              <div class="cards__headline">
+                Чат-бот
+              </div>
+              <hr class="cards__hr">
+              <div class="cards__text">
+                Искусственной интеллект для автоматизируемого общения с вашими потенциальными клиентами
+              </div>
+              <div class="cards__img">
+                <div class="bubble-wrap bubble-wrap-square--small">
+                  <div class="bubble">
+                    <img src="assets/img/icons/speech-balloon.webp" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="cards__card-bg">
+
+            <div class="cards__card">
+              <div class="cards__toggle"></div>
+              <div class="cards__headline">
+                Ипотечный калькулятор
+              </div>
+              <hr class="cards__hr">
+              <div class="cards__text">
+                Ипотечный калькулятор в несколько шагов с удобной навигацией и заявкой на расчет
+              </div>
+              <div class="cards__img">
+                <div class="bubble-wrap bubble-wrap-square--small">
+                  <div class="bubble">
+                    <img src="assets/img/icons/coin.webp" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="cards__card-bg">
+
+            <div class="cards__card">
+              <div class="cards__toggle"></div>
+              <div class="cards__headline">
+                Модуль для обзора объекта 360°
+              </div>
+              <hr class="cards__hr">
+              <div class="cards__text">
+                Возможность размещения на сайте обзора вашего объекта в режиме 360°
+              </div>
+            </div>
+
+          </div>
+
+          <div class="cards__card-bg">
+
+            <div class="cards__card">
+              <div class="cards__toggle"></div>
+              <div class="cards__headline">
+                Модуль онлайн камер на объекте
+              </div>
+              <hr class="cards__hr">
+              <div class="cards__text">
+                Удобный формат обзора стадии строительства объекта в режиме онлайн
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </section>
 
       <section class="modules">
         <div class="container">
-          <div class="cards-wrap">
-            <div class="cards">
 
-              <div class="cards__card-bg">
+          <div class="cards">
 
-                <div class="cards__card">
-                  <div class="cards__toggle"></div>
-                  <div class="cards__headline">
-                    Каталог квартир по параметрам
-                  </div>
+            <div class="cards__card-bg">
+              <div class="cards__card">
+                <div class="cards__toggle"></div>
+                <div class="cards__headline">
+                  Интеграция<br>с системой Profitbase
                 </div>
-
               </div>
-
-              <div class="cards__card-bg">
-
-                <div class="cards__card">
-                  <div class="cards__toggle"></div>
-                  <div class="cards__headline">
-                    Интеграция с CRM (Bitrix24, amoCRM)
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="cards__card-bg">
-
-                <div class="cards__card">
-                  <div class="cards__toggle"></div>
-                  <div class="cards__headline">
-                    Интеграция с Call Tracking
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="cards__card-bg">
-
-                <div class="cards__card">
-                  <div class="cards__toggle"></div>
-                  <div class="cards__headline">
-                    Интеграция с Яндекс Недвижимость
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="cards__card-bg">
-
-                <div class="cards__card">
-                  <div class="cards__toggle"></div>
-                  <div class="cards__headline">
-                    Интеграция с ЦИАН
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="cards__card-bg">
-
-                <div class="cards__card">
-                  <div class="cards__toggle"></div>
-                  <div class="cards__headline">
-                    Интеграция с ROIstat
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="cards__card-bg">
-
-                <div class="cards__card">
-                  <div class="cards__toggle"></div>
-                  <div class="cards__headline">
-                    Интеграция с ДомКлик
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="cards__card-bg">
-
-                <div class="cards__card">
-                  <div class="cards__toggle"></div>
-                  <div class="cards__headline">
-                    Интеграция с Авито
-                  </div>
-                </div>
-
-              </div>
-
             </div>
+
+            <div class="cards__card-bg">
+              <div class="cards__card">
+                <div class="cards__toggle"></div>
+                <div class="cards__headline">
+                  Интеграция с CRM (Bitrix24, amoCRM)
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__card-bg">
+              <div class="cards__card">
+                <div class="cards__toggle"></div>
+                <div class="cards__headline">
+                  Интеграция с Call Tracking
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__card-bg">
+              <div class="cards__card">
+                <div class="cards__toggle"></div>
+                <div class="cards__headline">
+                  Интеграция с Яндекс Недвижимость
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__card-bg">
+              <div class="cards__card">
+                <div class="cards__toggle"></div>
+                <div class="cards__headline">
+                  Интеграция с ЦИАН
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__card-bg">
+              <div class="cards__card">
+                <div class="cards__toggle"></div>
+                <div class="cards__headline">
+                  Интеграция с ROIstat
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__card-bg">
+              <div class="cards__card">
+                <div class="cards__toggle"></div>
+                <div class="cards__headline">
+                  Интеграция с ДомКлик
+                </div>
+              </div>
+            </div>
+
+            <div class="cards__card-bg">
+              <div class="cards__card">
+                <div class="cards__toggle"></div>
+                <div class="cards__headline">
+                  Интеграция с Авито
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -591,78 +570,76 @@
           </h2>
         </div>
 
-        <div class="cards-wrap">
-          <div class="cards">
+        <div class="cards">
 
-            <div class="cards__card-bg">
+          <div class="cards__card-bg">
 
-              <div class="cards__card">
+            <div class="cards__card">
 
-                <div class="cards__headline">
-                  Сайт новостройки
-                </div>
-                <div class="cards__hr"></div>
-                <div class="cards__text">
-                  Эффективный одностраничный сайт. Расскажет обо всех преимуществах объекта и позволит осуществить
-                  подбор квартиры.
-                </div>
-                <div class="cards__hr"></div>
-                <div class="cards__subheadline">
-                  Выбор планировок квартир<br>
-                  Ипотечный калькулятор<br>
-                  Модуль онлайн камер на объекте<br>
-                  Форма обратного звонка с видео<br>
-                  Модуль онлайн камер на объекте<br>
-                  Чат-бот / 3D тур
-
-                </div>
-                <a class="button button--hollow" href="javascript:void(0);" role="button" ontouchstart="">
-                  <span>Запросить смету</span>
-                </a>
+              <div class="cards__headline">
+                Сайт новостройки
+              </div>
+              <hr class="cards__hr">
+              <div class="cards__text">
+                Эффективный одностраничный сайт. Расскажет обо всех преимуществах объекта и позволит осуществить
+                подбор квартиры.
+              </div>
+              <hr class="cards__hr">
+              <div class="cards__subheadline">
+                Выбор планировок квартир<br>
+                Ипотечный калькулятор<br>
+                Модуль онлайн камер на объекте<br>
+                Форма обратного звонка с видео<br>
+                Модуль онлайн камер на объекте<br>
+                Чат-бот / 3D тур
 
               </div>
+              <a class="button button--hollow" href="javascript:void(0);" role="button" ontouchstart="">
+                Запросить смету
+              </a>
 
             </div>
 
-            <div class="cards__card-bg">
+          </div>
 
-              <div class="cards__card">
+          <div class="cards__card-bg">
 
-                <div class="cards__headline">
-                  Сайт застройщика
-                </div>
-                <div class="cards__hr"></div>
-                <div class="cards__text">
-                  Полнофункциональный корпоративный сайт строительной компании
-                </div>
-                <div class="cards__hr"></div>
-                <div class="cards__subheadline">
-                  Коммерческая недвижимость<br>
-                  Модуль для обзора объекта 360°<br>
-                  Модуль онлайн камер на объекте<br>
-                  Форма обратного звонка с видео<br>
-                  Визуальный выбор<br>
-                  Ипотечный калькулятор<br>
-                  Каталог объектов <br>
-                  Чат-бот / 3D тур<br>
-                  Каталог квартир
-                </div>
-                <a class="button button--hollow" href="javascript:void(0);" role="button" ontouchstart="">
-                  <span>Запросить смету</span>
-                </a>
+            <div class="cards__card">
 
-                <div class="bubbles">
+              <div class="cards__headline">
+                Сайт застройщика
+              </div>
+              <hr class="cards__hr">
+              <div class="cards__text">
+                Полнофункциональный корпоративный сайт строительной компании
+              </div>
+              <hr class="cards__hr">
+              <div class="cards__subheadline">
+                Коммерческая недвижимость<br>
+                Модуль для обзора объекта 360°<br>
+                Модуль онлайн камер на объекте<br>
+                Форма обратного звонка с видео<br>
+                Визуальный выбор<br>
+                Ипотечный калькулятор<br>
+                Каталог объектов <br>
+                Чат-бот / 3D тур<br>
+                Каталог квартир
+              </div>
+              <a class="button button--hollow" href="javascript:void(0);" role="button" ontouchstart="">
+                Запросить смету
+              </a>
 
-                  <div class="bubble-wrap bubble-wrap-rectangle">
-                    <div class="bubble">
-                      <img src="assets/img/icons/office.webp" alt="">
-                      <span>Лучшее предложение</span>
-                    </div>
+              <div class="bubbles">
+
+                <div class="bubble-wrap bubble-wrap-rectangle">
+                  <div class="bubble">
+                    <img src="assets/img/icons/office.webp" alt="">
+                    <span>Лучшее предложение</span>
                   </div>
                 </div>
               </div>
-
             </div>
+
           </div>
         </div>
       </section>
@@ -681,9 +658,8 @@
 
         <div class="result__pic">
           <picture>
-            <source media="(min-width: 1280px)" srcset="assets/img/manOnBoat-X.webp">
-            <source media="(min-width: 768px)" srcset="assets/img/manOnBoat-M.webp">
-            <img src="assets/img/manOnBoat-S.webp" alt="">
+            <source media="(min-width: 768px)" srcset="assets/img/vectors/manOnBoat.svg">
+            <img src="assets/img/vectors/manOnBoat--cropped.svg" alt="">
           </picture>
         </div>
 
@@ -694,6 +670,13 @@
               <div class="bubble">
                 <img src="assets/img/icons/coin.webp" alt="">
                 <span>Счастливы вы</span>
+
+                <div class="bubbles bubbles--decorative">
+                  <div class="circle circle--orange circle--small">
+                    <div class="circle-nested"></div>
+                  </div>
+                </div>
+
               </div>
             </div>
 
@@ -701,12 +684,26 @@
               <div class="bubble">
                 <img src="assets/img/icons/office.webp" alt="">
                 <span>Счастливы ваши клиенты</span>
+
+                <div class="bubbles bubbles--decorative">
+                  <div class="circle circle--orange circle--small">
+                    <div class="circle-nested"></div>
+                  </div>
+                </div>
+
               </div>
             </div>
 
           </div>
 
 
+        </div>
+
+        <div class="result__pic">
+          <picture>
+            <source media="(min-width: 768px)" srcset="assets/img/vectors/hugger.svg">
+            <img src="assets/img/vectors/hugger--cropped.svg" alt="">
+          </picture>
         </div>
 
       </section>
@@ -738,7 +735,7 @@
       </div>
 
       <a class="button" href="javascript:void(0);" role="button" ontouchstart="">
-        <span>Заказать сайт</span>
+        Заказать сайт
       </a>
     </aside>
 
