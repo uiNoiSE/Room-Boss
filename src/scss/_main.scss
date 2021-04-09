@@ -76,26 +76,62 @@ picture {
   object-fit: contain;
 }
 
-form.popup {
-  margin-top: 100px;
+.form {
+  @extend .cards__card-bg;
+  width: 284px;
 
-  & > input {
-    width: 242px;
-    border: none;
-    border-bottom: 2px solid $c-orange-light;
-    transition: 0.4s ease;
-    font-size: 20px;
-    line-height: 28px;
-    padding-bottom: 4px;
+  &-inner {
+    @extend .cards__card;
 
-    &:focus {
-      outline: none;
-      border-bottom: 2px solid $c-orange;
+    display: grid;
+    padding: 32px 18px 30px !important;
+    row-gap: 22px;
+    justify-content: center;
+
+    & > * {
+      width: 242px;
     }
 
-    &::placeholder {
-      font-family: $Gilroy;
-      font-weight: 400;
+    & > input {
+      width: 242px;
+      padding: 0 0 4px 0;
+
+      font-size: 20px;
+      line-height: 28px;
+
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid $c-orange-light;
+
+      transition: 0.4s ease;
+
+      &:focus {
+        border-bottom: 2px solid $c-orange;
+        outline: none;
+      }
+
+      &::placeholder {
+        font-family: $Gilroy;
+        font-weight: 400;
+      }
+
+      &[type="submit"] {
+        @extend .button;
+        margin-top: 8px;
+        padding-bottom: 0;
+        border: none;
+      }
+    }
+
+    & > p {
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 14px;
+
+      & > a {
+        color: $c-orange;
+        text-decoration: none;
+      }
     }
   }
 }
@@ -107,6 +143,7 @@ form.popup {
   width: 230px;
   height: 48px;
 
+  font-family: $Gilroy;
   font-weight: 600;
   font-size: 18px;
   line-height: 24px;
@@ -117,6 +154,11 @@ form.popup {
   background-color: $c-orange-dark;
 
   transition: 0.4s cubic-bezier(0.28, 0, 0.1, 1);
+
+  &:not(a) {
+    width: 242px;
+    height: 44px;
+  }
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
