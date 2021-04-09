@@ -1,0 +1,47 @@
+.stats {
+  padding-top: 50px;
+
+  // & > .container {
+  // }
+
+  &__wrap {
+    position: relative;
+    height: 409px;
+
+    color: $c-white;
+
+    background: $c-orange;
+
+    & > * {
+      position: absolute;
+    }
+  }
+
+  &__num {
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 73px;
+  }
+
+  &__text {
+    margin-top: -10px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &__years {
+    top: 10px;
+    left: 154px;
+  }
+  &__projects {
+    top: 97px;
+    left: 16px;
+  }
+
+  &__brandbooks {
+    top: 277px;
+    left: 16px;
+  }
+}

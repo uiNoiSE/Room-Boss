@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // phone number formater
   let phone = document.querySelectorAll(".js-phone");
   for (let item of phone) {
-    Inputmask("+9 999 999 99 99", { placeholder: '' }).mask(item);
+    Inputmask("+7 999 999 99 99", { placeholder: ' ' }).mask(item);
   }
 
 
@@ -55,5 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
       this.classList.toggle('cards__toggle--active');
     })
   })
+
+  let button = document.querySelectorAll('.button');
 
 });
