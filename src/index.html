@@ -149,6 +149,54 @@
     </svg>
 
     <div class="wrap">
+
+      <div class="popup">
+        <div class="form">
+          <div class="bubble-wrap bubble-wrap-rectangle">
+            <div class="bubble">
+              <img src="assets/img/icons/pencil.webp" alt="" />
+              <span>Рассказать ...</span>
+            </div>
+          </div>
+
+          <form class="form-inner">
+            <input
+              name="name"
+              type="text"
+              placeholder="Имя"
+              autocomplete="on"
+              required
+            />
+            <input
+              name="business"
+              type="text"
+              placeholder="Сфера бизнеса"
+              autocomplete="on"
+              required
+            />
+            <input
+              class="js-phone"
+              id="tel"
+              name="phone"
+              type="tel"
+              placeholder="Телефон"
+              autocomplete="on"
+              maxlength="17"
+              required
+            />
+            <input type="submit" />
+
+            <p>
+              Нажимая на кнопку, Вы соглашаетесь<br />
+              на
+              <a href="javascript:void(0);"
+                >обработку персональных данных</a
+              >
+            </p>
+          </form>
+        </div>
+      </div>
+      
       <header>
         <div class="container">
           <div class="logo">
@@ -921,6 +969,7 @@
           Заказать сайт
         </a>
       </aside>
+
     </div>
     <script src="assets/js/bundle.js" defer></script>
   </body>

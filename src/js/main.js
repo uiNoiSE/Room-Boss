@@ -93,4 +93,14 @@ document.addEventListener("DOMContentLoaded", function () {
     init();
     checkPosition();
   })();
+
+  // popup
+  let popupButton = document.querySelectorAll(".button");
+  let popupForm = document.querySelector('.popup');
+
+  forEach(popupButton, function(popupButton) {
+    popupButton.addEventListener('click', function () {
+      popupForm.classList.toggle('__active');
+    })
+  })
 });
