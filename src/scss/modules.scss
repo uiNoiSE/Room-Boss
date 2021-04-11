@@ -15,10 +15,8 @@
         row-gap: 11px;
       }
 
-      &__toggle {
-        &--active {
-          background: $c-green;
-        }
+      .animated {
+        background: $c-green;
       }
     }
   }

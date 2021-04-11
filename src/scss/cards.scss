@@ -61,13 +61,13 @@
 
       content: "";
     }
+  }
 
-    &--active {
-      background-color: $c-orange;
+  .animated {
+    background-color: $c-orange;
 
-      &::after {
-        margin-left: 18px;
-      }
+    &::after {
+      margin-left: 18px;
     }
   }
 
