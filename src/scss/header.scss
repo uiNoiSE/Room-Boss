@@ -20,17 +20,4 @@ header {
 			justify-content: space-between;
 		}
 	}
-
-	.logo {
-		width: 52px;
-		height: 35.38px;
-
-		& > a {
-			text-decoration: none;
-
-			& > svg.svg-icon {
-				color: $c-black;
-			}
-		}
-	}
 }

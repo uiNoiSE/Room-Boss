@@ -1,0 +1,82 @@
+.footer {
+  padding-top: 20px;
+  padding-bottom: 97px;
+
+  color: $c-gray-2;
+
+  background: $c-gray;
+
+  .logo {
+    grid-area: logo;
+    margin-bottom: 20px;
+  }
+
+  &__tel {
+    height: 44px;
+    grid-area: tel;
+    display: flex;
+    align-items: center;
+
+    font-weight: 500;
+  }
+
+  .social-icons {
+    &-wrapper {
+      align-self: center;
+      justify-self: flex-end;
+      grid-area: social;
+      margin-bottom: 0;
+      width: 64px;
+      height: 24px;
+    }
+
+    &__icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__anchors {
+    grid-area: anchors;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    margin-top: 10px;
+    justify-content: space-between;
+
+    & > a {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $c-gray-2;
+  }
+
+  & > .container {
+    display: grid;
+    grid-template-areas:
+      "logo logo"
+      "hr hr"
+      "tel social"
+      "hr-second hr-second"
+      "anchors anchors";
+
+    color: inherit;
+
+    hr {
+      height: 2px;
+      background: $c-black;
+      grid-area: hr;
+
+      &:last-of-type {
+        grid-area: hr-second;
+      }
+    }
+  }
+}

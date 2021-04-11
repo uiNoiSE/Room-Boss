@@ -216,3 +216,34 @@ p {
   font-size: 16px;
   line-height: 22px;
 }
+
+.logo {
+  width: 52px;
+  height: 35.38px;
+
+  & > a {
+    text-decoration: none;
+
+    & > svg.svg-icon {
+      color: $c-black;
+    }
+  }
+}
+
+.social-icons {
+  &-wrapper {
+    width: 84px;
+    height: 32px;
+    margin-bottom: 36px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+
+    color: $c-black;
+  }
+}
