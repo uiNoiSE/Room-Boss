@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
   headerLogo.addEventListener("click", function () {
     aside.classList.remove("_active");
     hamburger.classList.remove("is-active");
+    body.classList.remove('_sideElemActive');
   });
 
   // phone number formater
