@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     document.addEventListener("mousemove", parallax);
   }
-  
+
 
   // burger logics
   let body = document.querySelector("body");
@@ -34,9 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
       this.classList.toggle("is-active");
       if (!aside.classList.contains("_active")) {
         aside.classList.toggle("_active");
-        body.classList.add("_burger-active");
+        body.classList.add("_sideElemActive");
       } else {
-        body.classList.remove("_burger-active");
+        body.classList.remove("_sideElemActive");
         aside.classList.toggle("_active");
       }
     },
@@ -101,12 +101,15 @@ document.addEventListener("DOMContentLoaded", function () {
   forEach(popupButton, function (popupButton) {
     popupButton.addEventListener('click', function () {
       popupForm.classList.add('__active');
+      body.classList.toggle('_sideElemActive');
     })
   })
 
   popupForm.addEventListener('click', function (e) {
     if (e.currentTarget === e.target) {
       popupForm.classList.remove('__active');
+      body.classList.toggle('_sideElemActive');
+
     }
   })
 
