@@ -43,6 +43,15 @@ document.addEventListener("DOMContentLoaded", function () {
     false
   );
 
+  let asideAnchors = document.querySelectorAll('aside > a');
+  forEach(asideAnchors, (asideAnchors) => {
+    asideAnchors.addEventListener("click", () => {
+      aside.classList.remove("_active");
+      body.classList.remove("_sideElemActive");
+      hamburger.classList.remove("is-active");
+    })
+  })
+
   let headerLogo = document.querySelector("header > .container > .logo");
   headerLogo.addEventListener("click", function () {
     aside.classList.remove("_active");
