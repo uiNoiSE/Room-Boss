@@ -8,14 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(() => {
         this.querySelectorAll(".js-layer").forEach((layer) => {
           let speed = layer.getAttribute("data-speed");
-          layer.style.transform = `translate(${
-            (event.clientX * speed) / 500
-          }px, ${(event.clientY * speed) / 500}px)`;
+          layer.style.transform = `translate(${(event.clientX * speed) / 500
+            }px, ${(event.clientY * speed) / 500}px)`;
         });
       }, 100);
     }
     document.addEventListener("mousemove", parallax);
   }
+  
 
   // burger logics
   let body = document.querySelector("body");
@@ -63,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  let button = document.querySelectorAll(".button");
 
   // for appear animations
   var anim = document.querySelectorAll(".js-anim");
@@ -94,13 +93,21 @@ document.addEventListener("DOMContentLoaded", function () {
     checkPosition();
   })();
 
+
   // popup
   let popupButton = document.querySelectorAll(".button");
-  let popupForm = document.querySelector('.popup');
+  let popupForm = document.querySelector('.js-popup');
 
-  forEach(popupButton, function(popupButton) {
+  forEach(popupButton, function (popupButton) {
     popupButton.addEventListener('click', function () {
-      popupForm.classList.toggle('__active');
+      popupForm.classList.add('__active');
     })
   })
+
+  popupForm.addEventListener('click', function (e) {
+    if (e.currentTarget === e.target) {
+      popupForm.classList.remove('__active');
+    }
+  })
+
 });
