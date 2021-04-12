@@ -101,16 +101,27 @@ document.addEventListener("DOMContentLoaded", function () {
   forEach(popupButton, function (popupButton) {
     popupButton.addEventListener('click', function () {
       popupForm.classList.add('__active');
-      body.classList.toggle('_sideElemActive');
+      body.classList.add('_sideElemActive');
     })
   })
 
   popupForm.addEventListener('click', function (e) {
     if (e.currentTarget === e.target) {
       popupForm.classList.remove('__active');
-      body.classList.toggle('_sideElemActive');
-
+      if (!aside.classList.contains("_active")) {
+        body.classList.remove('_sideElemActive');
+      }
     }
   })
+
+  // popup close on Escape press
+  body.addEventListener("keydown", function (e) {
+    if (e.key === 'Escape') {
+      if (popupForm.classList.contains('__active')) {
+        popupForm.classList.remove('__active');
+        body.classList.remove('_sideElemActive');
+      }
+    }
+  });
 
 });

@@ -18,6 +18,13 @@
     align-items: center;
 
     font-weight: 500;
+
+    & > a {
+      &:active {
+        color: $c-black;
+        transition: 0.2s cubic-bezier(0.28, 0, 0.1, 1);
+      }
+    }
   }
 
   .social-icons {
@@ -33,23 +40,48 @@
     &__icon {
       width: 24px;
       height: 24px;
+
+      &:active {
+        color: $c-black;
+        transition: 0.2s cubic-bezier(0.28, 0, 0.1, 1);
+      }
     }
   }
 
   &__anchors {
     grid-area: anchors;
 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    row-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     margin-top: 10px;
-    justify-content: space-between;
+    row-gap: 20px;
+    column-gap: 16px;
 
-    & > a {
+    justify-items: stretch;
+
+    display: grid;
+
+    a {
       font-weight: 500;
       font-size: 18px;
       line-height: 25px;
+
+      transition: 0.2s cubic-bezier(0.28, 0, 0.1, 1);
+
+      grid-area: 2;
+
+      &:nth-child(1) {
+        grid-area: 1;
+      }
+
+      &:nth-child(2) {
+        grid-area: 1;
+      }
+
+      &:active {
+        color: $c-black;
+        transition: 0.2s cubic-bezier(0.28, 0, 0.1, 1);
+      }
     }
   }
 
