@@ -30,6 +30,64 @@
       right: 10px;
     }
   }
+
+  @media ($m-xxs) and (orientation: landscape) {
+    .form {
+      width: auto;
+
+      & > .bubble-wrap {
+        top: -20px;
+      }
+    }
+
+    .form-inner {
+      padding: 28px !important;
+      column-gap: 20px;
+      grid-template-areas:
+        "name name"
+        "business business"
+        "tel tel"
+        "button policy";
+
+      & > * {
+        width: auto;
+      }
+
+      input {
+        &[type="text"] {
+          &:nth-child(1) {
+            grid-area: name;
+          }
+
+          &:nth-child(2) {
+            grid-area: business;
+          }
+
+          &:nth-child(3) {
+            grid-area: tel;
+          }
+        }
+
+        &[type="tel"] {
+          grid-area: tel;
+        }
+
+        &[type="submit"] {
+          margin-top: 0;
+          grid-area: button;
+          min-height: 44px;
+          width: auto;
+          min-width: 160px;
+        }
+      }
+
+      p {
+        grid-area: policy;
+        height: fit-content;
+        align-self: center;
+      }
+    }
+  }
 }
 
 .__active {

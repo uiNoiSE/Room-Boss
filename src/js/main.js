@@ -8,14 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(() => {
         this.querySelectorAll(".js-layer").forEach((layer) => {
           let speed = layer.getAttribute("data-speed");
-          layer.style.transform = `translate(${(event.clientX * speed) / 500
-            }px, ${(event.clientY * speed) / 500}px)`;
+          layer.style.transform = `translate(${
+            (event.clientX * speed) / 500
+          }px, ${(event.clientY * speed) / 500}px)`;
         });
       }, 100);
     }
     document.addEventListener("mousemove", parallax);
   }
-
 
   // burger logics
   let body = document.querySelector("body");
@@ -43,20 +43,21 @@ document.addEventListener("DOMContentLoaded", function () {
     false
   );
 
-  let asideAnchors = document.querySelectorAll('aside > a');
+  // close menu on menu anchor link tap
+  let asideAnchors = document.querySelectorAll("aside a");
   forEach(asideAnchors, (asideAnchors) => {
-    asideAnchors.addEventListener("click", () => {
+    asideAnchors.addEventListener("click", (e) => {
       aside.classList.remove("_active");
       body.classList.remove("_sideElemActive");
       hamburger.classList.remove("is-active");
-    })
-  })
+    });
+  });
 
-  let headerLogo = document.querySelector("header > .container > .logo");
+  let headerLogo = document.querySelector("header .logo");
   headerLogo.addEventListener("click", function () {
     aside.classList.remove("_active");
     hamburger.classList.remove("is-active");
-    body.classList.remove('_sideElemActive');
+    body.classList.remove("_sideElemActive");
   });
 
   // phone number formater
@@ -64,15 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
   for (let item of phone) {
     Inputmask("+7 999 999 99 99", { placeholder: " " }).mask(item);
   }
-
-  // card togglers
-  let card = document.querySelectorAll(".js-anim");
-  forEach(card, function (card) {
-    card.addEventListener("click", function () {
-      this.classList.toggle("animated");
-    });
-  });
-
 
   // for appear animations
   var anim = document.querySelectorAll(".js-anim");
@@ -103,33 +95,32 @@ document.addEventListener("DOMContentLoaded", function () {
     checkPosition();
   })();
 
-
   // popup
   let popupButton = document.querySelectorAll(".button");
-  let popupForm = document.querySelector('.js-popup');
+  let popupForm = document.querySelector(".js-popup");
 
   forEach(popupButton, function (popupButton) {
-    popupButton.addEventListener('click', function () {
-      popupForm.classList.add('__active');
-      body.classList.add('_sideElemActive');
-    })
-  })
+    popupButton.addEventListener("click", function () {
+      popupForm.classList.add("__active");
+      body.classList.add("_sideElemActive");
+    });
+  });
 
-  popupForm.addEventListener('click', function (e) {
+  popupForm.addEventListener("click", function (e) {
     if (e.currentTarget === e.target) {
-      popupForm.classList.remove('__active');
+      popupForm.classList.remove("__active");
       if (!aside.classList.contains("_active")) {
-        body.classList.remove('_sideElemActive');
+        body.classList.remove("_sideElemActive");
       }
     }
-  })
+  });
 
   // popup close on Escape press
   body.addEventListener("keydown", function (e) {
-    if (e.key === 'Escape') {
-      if (popupForm.classList.contains('__active')) {
-        popupForm.classList.remove('__active');
-        body.classList.remove('_sideElemActive');
+    if (e.key === "Escape") {
+      if (popupForm.classList.contains("__active")) {
+        popupForm.classList.remove("__active");
+        body.classList.remove("_sideElemActive");
       }
     }
   });
