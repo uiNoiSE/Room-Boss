@@ -125,4 +125,31 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  let crop = document.querySelector(".floors__highlight");
+  let floorsMarker = document.querySelectorAll(".floors__marker");
+
+  let n = floorsMarker.length;
+  marker(n);
+
+  function marker(n) {
+    if (n <= 0) {
+      return;
+    } else {
+      floorsMarker[n - 1].addEventListener("mouseover", () => {
+        if (!crop.classList.contains("__js-active")) {
+          let cropClass = "floors__highlight";
+
+          crop.className = `${
+            cropClass + " " + cropClass + "--" + n + " __js-active"
+          }`;
+        }
+      });
+
+      floorsMarker[n - 1].addEventListener("mouseout", () => {
+        crop.classList.remove("__js-active");
+      });
+
+      return marker(n - 1);
+    }
+  }
 });
