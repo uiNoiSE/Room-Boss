@@ -125,8 +125,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  let variants = document.querySelector(".floors__variants-wrap");
   let crop = document.querySelector(".floors__highlight");
   let floorsMarker = document.querySelectorAll(".floors__marker");
+  let floorNum = document.querySelector(".floors__floor > span");
 
   let n = floorsMarker.length;
   marker(n);
@@ -135,18 +137,46 @@ document.addEventListener("DOMContentLoaded", function () {
     if (n <= 0) {
       return;
     } else {
-      floorsMarker[n - 1].addEventListener("mouseover", () => {
+      floorsMarker[n - 1].addEventListener("mouseenter", () => {
         if (!crop.classList.contains("__js-active")) {
           let cropClass = "floors__highlight";
 
           crop.className = `${
             cropClass + " " + cropClass + "--" + n + " __js-active"
           }`;
+
+          if (!variants.classList.contains("__js-active")) {
+            variants.classList.add("__js-active");
+
+            switch (n) {
+              case 1:
+                variants.style.top = "20%";
+                return (floorNum.innerText = 4);
+
+              case 2:
+                variants.style.top = "30%";
+                return (floorNum.innerText = 3);
+
+              case 3:
+                variants.style.top = "40%";
+                return (floorNum.innerText = 2);
+
+              case 4:
+                variants.style.top = "50%";
+                return (floorNum.innerText = 1);
+            }
+          }
         }
       });
 
-      floorsMarker[n - 1].addEventListener("mouseout", () => {
+      // floorsMarker[n - 1].addEventListener("mouseout", () => {
+      //   variants.classList.remove("__js-active");
+      //   crop.classList.remove("__js-active");
+      // });
+
+      variants.addEventListener("mouseleave", () => {
         crop.classList.remove("__js-active");
+        variants.classList.remove("__js-active");
       });
 
       return marker(n - 1);
