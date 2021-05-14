@@ -129,6 +129,14 @@ document.addEventListener("DOMContentLoaded", function () {
   let crop = document.querySelector(".floors__highlight");
   let floorsMarker = document.querySelectorAll(".floors__marker");
   let floorNum = document.querySelector(".floors__floor > span");
+  let space = document.querySelector(".floors__space > span");
+  let onSell = document.querySelector(".floors__on-sell > span");
+
+  variants.addEventListener("mouseleave", (e) => {
+    console.log('mouseleave');
+    crop.classList.remove("__js-active");
+    variants.classList.remove("__js-active");
+  });
 
   let n = floorsMarker.length;
   marker(n);
@@ -150,18 +158,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
             switch (n) {
               case 1:
+                space.innerText = 150;
+                onSell.innerText = 4;
                 variants.style.top = "20%";
                 return (floorNum.innerText = 4);
 
               case 2:
+                space.innerText = 135;
                 variants.style.top = "30%";
                 return (floorNum.innerText = 3);
 
               case 3:
+                space.innerText = 105;
                 variants.style.top = "40%";
                 return (floorNum.innerText = 2);
 
               case 4:
+                space.innerText = 90;
                 variants.style.top = "50%";
                 return (floorNum.innerText = 1);
             }
@@ -173,11 +186,6 @@ document.addEventListener("DOMContentLoaded", function () {
       //   variants.classList.remove("__js-active");
       //   crop.classList.remove("__js-active");
       // });
-
-      variants.addEventListener("mouseleave", () => {
-        crop.classList.remove("__js-active");
-        variants.classList.remove("__js-active");
-      });
 
       return marker(n - 1);
     }

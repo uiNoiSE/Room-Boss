@@ -133,8 +133,9 @@
     position: absolute;
     z-index: 5;
 
-    height: 32px;
-    width: 32px;
+    height: 50px;
+    width: 50px;
+    padding: 12px;
     color: #f99f3d;
 
     & > svg {
@@ -142,23 +143,23 @@
     }
 
     &:nth-of-type(1) {
-      top: 145px;
-      left: 355px;
+      top: 134px;
+      left: 346px;
     }
 
     &:nth-of-type(2) {
-      top: 200px;
-      left: 295px;
+      top: 185px;
+      left: 288px;
     }
 
     &:nth-of-type(3) {
-      top: 270px;
-      left: 360px;
+      top: 262px;
+      left: 349px;
     }
 
     &:nth-of-type(4) {
-      top: 325px;
-      left: 295px;
+      top: 320px;
+      left: 290px;
     }
   }
 
@@ -234,7 +235,6 @@
     &-wrap {
       position: absolute;
       z-index: 10;
-      top: 30%;
       left: calc(50% - 134px);
 
       width: 268px;
@@ -256,7 +256,7 @@
       transition: opacity 0.4s cubic-bezier(0.28, 0, 0.1, 1);
 
       &.__js-active {
-        transition: opacity 0.4s cubic-bezier(0.28, 0, 0.1, 1) 0.4s;
+        transition: opacity 0.4s cubic-bezier(0.28, 0, 0.1, 1) 0.4s, top 0.4s cubic-bezier(0.28, 0, 0.1, 1);
         pointer-events: all;
       }
     }
