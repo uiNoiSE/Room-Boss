@@ -1,22 +1,6 @@
 import Inputmask from "inputmask";
 
 document.addEventListener("DOMContentLoaded", function () {
-  // check. If mobile(false) - parallax will work
-  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  if (!isMobile) {
-    function parallax(event) {
-      setTimeout(() => {
-        this.querySelectorAll(".js-layer").forEach((layer) => {
-          let speed = layer.getAttribute("data-speed");
-          layer.style.transform = `translate(${
-            (event.clientX * speed) / 500
-          }px, ${(event.clientY * speed) / 500}px)`;
-        });
-      }, 100);
-    }
-    document.addEventListener("mousemove", parallax);
-  }
-
   // burger logics
   let body = document.querySelector("body");
   let aside = document.querySelector("aside");
@@ -125,18 +109,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  let variants = document.querySelector(".floors__variants-wrap");
   let crop = document.querySelector(".floors__highlight");
   let floorsMarker = document.querySelectorAll(".floors__marker");
   let floorNum = document.querySelector(".floors__floor > span");
   let space = document.querySelector(".floors__space > span");
   let onSell = document.querySelector(".floors__on-sell > span");
-
-  variants.addEventListener("mouseleave", (e) => {
-    console.log('mouseleave');
-    crop.classList.remove("__js-active");
-    variants.classList.remove("__js-active");
-  });
+  let variants = document.querySelector(".floors__variants-wrap");
+  let floorsCross = document.querySelector(".floors__cross-wrap");
+  let floorsRoomsAvailable = document.querySelector(".floors__rooms");
 
   let n = floorsMarker.length;
   marker(n);
@@ -146,48 +126,85 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     } else {
       floorsMarker[n - 1].addEventListener("mouseenter", () => {
-        if (!crop.classList.contains("__js-active")) {
-          let cropClass = "floors__highlight";
+        let cropClass = "floors__highlight";
 
+        function floorSelect() {
           crop.className = `${
             cropClass + " " + cropClass + "--" + n + " __js-active"
           }`;
+          variants.classList.add("__js-active");
 
-          if (!variants.classList.contains("__js-active")) {
-            variants.classList.add("__js-active");
+          switch (n) {
+            case 1:
+              space.innerText = 150;
+              onSell.innerText = 4;
+              variants.style.cssText = "top: 20%";
+              floorsRoomsAvailable.children[0].classList.remove("js-disabled");
+              floorsRoomsAvailable.children[1].classList.remove("js-disabled");
+              floorsRoomsAvailable.children[2].classList.add("js-disabled");
+              return (floorNum.innerText = 4);
 
-            switch (n) {
-              case 1:
-                space.innerText = 150;
-                onSell.innerText = 4;
-                variants.style.top = "20%";
-                return (floorNum.innerText = 4);
+            case 2:
+              space.innerText = 135;
+              variants.style.cssText = "top: 30%";
+              floorsRoomsAvailable.children[0].classList.add("js-disabled");
+              floorsRoomsAvailable.children[1].classList.remove("js-disabled");
+              floorsRoomsAvailable.children[2].classList.remove("js-disabled");
+              return (floorNum.innerText = 3);
 
-              case 2:
-                space.innerText = 135;
-                variants.style.top = "30%";
-                return (floorNum.innerText = 3);
+            case 3:
+              space.innerText = 105;
+              variants.style.cssText = "top: 40%";
+              floorsRoomsAvailable.children[0].classList.remove("js-disabled");
+              floorsRoomsAvailable.children[1].classList.add("js-disabled");
+              floorsRoomsAvailable.children[2].classList.add("js-disabled");
+              return (floorNum.innerText = 2);
 
-              case 3:
-                space.innerText = 105;
-                variants.style.top = "40%";
-                return (floorNum.innerText = 2);
-
-              case 4:
-                space.innerText = 90;
-                variants.style.top = "50%";
-                return (floorNum.innerText = 1);
-            }
+            case 4:
+              space.innerText = 90;
+              variants.style.cssText = "top: 50%";
+              floorsRoomsAvailable.children[0].classList.add("js-disabled");
+              floorsRoomsAvailable.children[1].classList.remove("js-disabled");
+              floorsRoomsAvailable.children[2].classList.add("js-disabled");
+              return (floorNum.innerText = 1);
           }
+        }
+
+        floorSelect();
+      });
+
+      floorsCross.addEventListener("click", (e) => {
+        if (variants.classList.contains("__js-active")) {
+          variants.classList.remove("__js-active");
+          crop.classList.remove("__js-active");
         }
       });
 
-      // floorsMarker[n - 1].addEventListener("mouseout", () => {
-      //   variants.classList.remove("__js-active");
-      //   crop.classList.remove("__js-active");
-      // });
+      variants.addEventListener("mouseout", () => {
+        if (variants.classList.contains("__js-active")) {
+          variants.classList.remove("__js-active");
+          crop.classList.remove("__js-active");
+        }
+      });
 
       return marker(n - 1);
     }
+  }
+
+  // check. If mobile(false) - parallax will work
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if (!isMobile) {
+    function parallax(event) {
+      setTimeout(() => {
+        this.querySelectorAll(".js-layer").forEach((layer) => {
+          let speed = layer.getAttribute("data-speed");
+          layer.style.transform = `translate(${
+            (event.clientX * speed) / 500
+          }px, ${(event.clientY * speed) / 500}px)`;
+        });
+      }, 100);
+    }
+    document.addEventListener("mousemove", parallax);
+    floorsCross.remove();
   }
 });

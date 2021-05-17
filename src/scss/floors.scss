@@ -208,22 +208,69 @@
       padding: 5px 11px 6px;
       background-color: $c-white;
 
-      &--disabled {
+      &.js-disabled {
         background-color: transparentize($c-white, 0.5);
       }
     }
   }
 
+  &__cross-wrap {
+    position: absolute;
+
+    top: -12px;
+    right: -12px;
+
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+
+    pointer-events: none;
+
+    & > .floors__cross {
+      position: relative;
+
+      width: 24px;
+      height: 24px;
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: calc(50% - 1px);
+        left: calc(50% - 10px);
+
+        width: 20px;
+        height: 2px;
+        border-radius: 4px;
+        background-color: $c-white;
+
+        content: "";
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
   &__variants {
+    position: relative;
+
     width: 236px;
     height: 158px;
     padding: 12px 22px 20px;
+
     background-color: $c-orange;
     border-radius: inherit;
     border: 2px solid white;
+    box-shadow: 0px 3.18584px 79.646px rgba(128, 128, 128, 0.3);
+
     color: $c-white;
 
-    box-shadow: 0px 3.18584px 79.646px rgba(128, 128, 128, 0.3);
+    pointer-events: none;
 
     hr {
       margin-bottom: 14px;
@@ -256,8 +303,20 @@
       transition: opacity 0.4s cubic-bezier(0.28, 0, 0.1, 1);
 
       &.__js-active {
-        transition: opacity 0.4s cubic-bezier(0.28, 0, 0.1, 1) 0.4s, top 0.4s cubic-bezier(0.28, 0, 0.1, 1);
-        pointer-events: all;
+        transition: opacity 0.4s cubic-bezier(0.28, 0, 0.1, 1) 0.4s,
+          top 0.4s cubic-bezier(0.28, 0, 0.1, 1);
+
+        & > .floors__variants {
+          pointer-events: all;
+
+          & > .floors__cross-wrap {
+            pointer-events: inherit;
+          }
+
+          & > * {
+            pointer-events: none;
+          }
+        }
       }
     }
   }
