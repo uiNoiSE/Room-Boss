@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  margin-bottom: 40px;
 
   &__bg {
     position: relative;
@@ -16,6 +17,11 @@
       width: auto;
       height: 100%;
     }
+  }
+
+  & > .button {
+    align-self: center;
+    margin-top: 16px;
   }
 
   &__highlight {
