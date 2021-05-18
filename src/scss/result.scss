@@ -13,41 +13,82 @@
       font-size: 16px;
       line-height: 22px;
     }
+  }
 
-    .bubbles {
+  & > .bubbles {
+    position: absolute;
+    top: 430px;
+
+    display: grid;
+    row-gap: 20px;
+    width: 100%;
+    padding: 0 24px;
+
+    @media ($m-xxxxs) and (orientation: landscape) {
+      position: absolute;
+      top: 0;
+    }
+
+    & > .bubble-wrap {
+      &:nth-child(1) {
+        .bubbles--decorative {
+          top: -11px;
+          left: 98px;
+        }
+      }
+
+      &:nth-child(2) {
+        .bubbles--decorative {
+          top: 41px;
+          left: 147px;
+        }
+      }
+    }
+
+    .bubble {
       position: relative;
-      display: grid;
-      row-gap: 20px;
+      padding: 8px;
+    }
 
-      & > .bubble-wrap {
+    .bubbles--decorative {
+      position: absolute;
+    }
+
+    .bubble-wrap {
+      position: static;
+
+      &:nth-child(1) {
+        justify-self: flex-end;
+        top: 460px;
+        right: 24px;
+      }
+
+      &:nth-child(2) {
+        top: 528px;
+        left: 24px;
+      }
+
+      @media ($m-xxxxs) and (orientation: landscape) {
+        position: absolute;
+
         &:nth-child(1) {
+          top: 180px;
+          right: 200px;
+
           .bubbles--decorative {
-            top: -11px;
-            left: 98px;
+            top: 46px;
+            left: -5px;
           }
         }
 
         &:nth-child(2) {
+          top: 358px;
+          left: 195px;
+
           .bubbles--decorative {
-            top: 41px;
-            left: 147px;
+            top: -10px;
+            left: 200px;
           }
-        }
-      }
-
-      .bubble {
-        position: relative;
-        padding: 8px;
-      }
-
-      .bubbles--decorative {
-        position: absolute;
-      }
-
-      .bubble-wrap {
-        position: static;
-        &:nth-child(1) {
-          justify-self: flex-end;
         }
       }
     }
@@ -65,20 +106,13 @@
     row-gap: 50px;
     padding-top: 130px;
 
-    & > .bubbles {
-      position: absolute;
+    @media ($m-xxxxs) and (orientation: landscape) {
+      grid-template-columns: 50% 40%;
+      column-gap: 10%;
 
-      width: 100%;
-
-      & > .bubble-wrap {
-        &:nth-child(1) {
-          top: 460px;
-          right: 24px;
-        }
-
+      & > .result__pic {
         &:nth-child(2) {
-          top: 528px;
-          left: 24px;
+          padding-top: 40px;
         }
       }
     }

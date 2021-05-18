@@ -12,6 +12,10 @@
       font-size: 18px;
       line-height: 24px;
 
+      @media ($m-xxxxs) and (orientation: landscape) {
+        width: 202px;
+      }
+
       span {
         color: $c-orange;
       }
@@ -25,6 +29,12 @@
     flex-direction: column;
     padding-top: 58px;
     padding-bottom: 73px;
+
+    @media ($m-xxxxs) and (orientation: landscape) {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      column-gap: 30px;
+    }
 
     & > .bubbles--decorative {
       position: relative;
@@ -44,6 +54,10 @@
           left: 185px;
 
           margin-left: 2px;
+
+          @media ($m-xxxxs) and (orientation: landscape) {
+            top: 50px;
+          }
         }
 
         &:nth-child(3) {
@@ -51,7 +65,15 @@
           left: 174px;
 
           margin-left: 2px;
+
+          @media ($m-xxxxs) and (orientation: landscape) {
+            top: 45px;
+          }
         }
+      }
+
+      @media ($m-xxxxs) and (orientation: landscape) {
+        order: 3;
       }
     }
 
