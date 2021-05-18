@@ -56,6 +56,7 @@
     margin-top: 10px;
     row-gap: 20px;
     column-gap: 16px;
+    margin-bottom: 44px;
 
     justify-items: stretch;
 
@@ -85,6 +86,43 @@
     }
   }
 
+  &__tou {
+    margin-bottom: 26px;
+
+    font-family: $PT;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: $c-white;
+
+    grid-area: tou;
+    opacity: 0.3;
+  }
+
+  &__copy {
+    font-family: $PT;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: $c-white;
+
+    grid-area: copy;
+    align-self: center;
+    opacity: 0.3;
+  }
+
+  &__made-by {
+    width: 104px;
+    height: 26px;
+    justify-self: flex-end;
+    grid-area: made-by;
+    opacity: 0.2;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
   a {
     text-decoration: none;
     color: $c-gray-2;
@@ -97,7 +135,9 @@
       "hr hr"
       "tel social"
       "hr-second hr-second"
-      "anchors anchors";
+      "anchors anchors"
+      "tou tou"
+      "copy made-by";
 
     color: inherit;
 
