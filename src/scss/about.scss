@@ -3,6 +3,10 @@
 
   padding: 40px 0 138px;
 
+  @media ($m-xxxxs) and (orientation: landscape) {
+    padding: 40px 0 100px;
+  }
+
   & > .container {
     h2 {
       margin-bottom: 24px;
@@ -70,6 +74,10 @@
 
     background-color: $c-orange;
 
+    @media ($m-xxxxs) and (orientation: landscape) {
+      height: 200px;
+    }
+
     & > .about__tag {
       position: absolute;
 
@@ -81,6 +89,12 @@
       &:nth-child(8) {
         top: 223px;
         left: 26px;
+
+        @media ($m-xxxxs) and (orientation: landscape) {
+          top: 53px;
+          left: auto;
+          right: 30px;
+        }
       }
 
       & > span {
@@ -130,6 +144,39 @@
       &:nth-child(6) {
         bottom: -77px;
         right: 0;
+      }
+
+      @media ($m-xxxxs) and (orientation: landscape) {
+        &:nth-child(1) {
+          top: -55px;
+          left: 24px;
+        }
+
+        &:nth-child(2) {
+          top: -12px;
+          right: -5px;
+        }
+
+        &:nth-child(3) {
+          top: 48px;
+          left: -16px;
+        }
+
+        &:nth-child(4) {
+          top: 170px;
+          left: 20px;
+        }
+
+        &:nth-child(5) {
+          left: auto;
+          right: -10px;
+          bottom: 47px;
+        }
+
+        &:nth-child(6) {
+          bottom: -55px;
+          right: 0;
+        }
       }
     }
 

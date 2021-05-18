@@ -1,5 +1,9 @@
 .result {
+  position: relative;
+
   & > .container {
+    position: absolute;
+
     h2 {
       margin-top: 16px;
     }
@@ -54,17 +58,45 @@
     margin-bottom: 16px;
   }
 
-  & > &__pic {
-    & > picture > * {
-      margin-top: -50px;
-      margin-bottom: -90px;
-    }
+  & > &__pics {
+    position: relative;
 
-    &:last-of-type {
-      & > picture > * {
-        margin-top: 20px;
-        margin-bottom: 0;
+    display: grid;
+    row-gap: 50px;
+    padding-top: 130px;
+
+    & > .bubbles {
+      position: absolute;
+
+      width: 100%;
+
+      & > .bubble-wrap {
+        &:nth-child(1) {
+          top: 460px;
+          right: 24px;
+        }
+
+        &:nth-child(2) {
+          top: 528px;
+          left: 24px;
+        }
       }
     }
+
+    // @media ($m-xxxxs) and (orientation: landscape) {
+    //   width: 50%;
+    // }
+
+    // & > picture > * {
+    //   margin-top: -50px;
+    //   margin-bottom: -90px;
+    // }
+
+    // &:last-of-type {
+    //   & > picture > * {
+    //     margin-top: 20px;
+    //     margin-bottom: 0;
+    //   }
+    // }
   }
 }
