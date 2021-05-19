@@ -14,6 +14,13 @@
       font-weight: 600;
       font-size: 28px;
       line-height: 33px;
+
+      @media ($m-s) {
+        width: 315px;
+
+        font-size: 48px;
+        line-height: 52px;
+      }
     }
 
     & > h2 {
@@ -22,6 +29,13 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 22px;
+
+      @media ($m-s) {
+        width: 450px;
+
+        font-size: 24px;
+        line-height: 34px;
+      }
     }
 
     @media ($m-xxxxs) and (orientation: landscape) {
@@ -102,6 +116,38 @@
 
           &:nth-child(6) {
             top: 234px;
+            right: 0;
+          }
+        }
+
+        @media ($m-s) {
+          &:nth-child(1) {
+            top: 160px;
+            right: 0;
+          }
+
+          &:nth-child(2) {
+            top: 80px;
+            right: 70px;
+          }
+
+          &:nth-child(3) {
+            top: 360px;
+            right: 70px;
+          }
+
+          &:nth-child(4) {
+            top: 360px;
+            right: 0;
+          }
+
+          &:nth-child(5) {
+            top: 460px;
+            right: 350px;
+          }
+
+          &:nth-child(6) {
+            top: 260px;
             right: 0;
           }
         }

@@ -35,6 +35,11 @@
     & img {
       width: 40px;
       height: 40px;
+
+      @media ($m-s) {
+        width: 64px;
+        height: 64px;
+      }
     }
   }
 
@@ -61,6 +66,11 @@
       & img {
         width: 26px;
         height: 26px;
+
+        @media ($m-s) {
+          width: 40px;
+          height: 40px;
+        }
       }
     }
   }
@@ -94,6 +104,10 @@
     #f7f7f7 12.61%,
     rgba(242, 242, 242, 0.75) 91.76%
   );
+
+  @media ($m-s) {
+    padding: 6px 12px;
+  }
 
   &s {
     position: absolute;
@@ -202,5 +216,10 @@
     font-weight: 600;
     font-size: 12px;
     line-height: 14px;
+
+    @media ($m-s) {
+      font-size: 18px;
+      line-height: 20px;
+    }
   }
 }

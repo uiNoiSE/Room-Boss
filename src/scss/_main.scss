@@ -158,6 +158,14 @@ picture {
 
   transition: 0.4s cubic-bezier(0.28, 0, 0.1, 1);
 
+  @media ($m-s) {
+    width: 223px;
+    height: 65px;
+
+    font-size: 24px;
+    line-height: 29px;
+  }
+
   &:not(a) {
     width: 242px;
     height: 44px;
