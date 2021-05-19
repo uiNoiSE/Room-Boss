@@ -42,6 +42,10 @@ $PT: "PT Root UI", Arial, ui-sans-serif;
 $g-bg: linear-gradient(181.49deg, rgba(255, 255, 255, 0) 56.58%, #ffffff 98.74%), #e7e7e9;
 $g-bg-reverse: linear-gradient(181.7deg, #ffffff 1.44%, rgba(255, 255, 255, 0) 49.25%), #e7e7e9;
 
+// Transitions
+$t-main: 0.4s cubic-bezier(0.28, 0, 0.1, 1);
+
+
 html,
 body {
   background: $c-white;

@@ -224,6 +224,16 @@ p {
   width: 52px;
   height: 35.38px;
 
+  @media ($m-s) {
+    width: 80px;
+    height: 55px;
+  }
+
+  @media ($m-xxxs) and (orientation: landscape) {
+    width: 52px;
+    height: 35.38px;
+  }
+
   & > a {
     text-decoration: none;
 

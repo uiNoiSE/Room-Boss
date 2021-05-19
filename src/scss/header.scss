@@ -1,23 +1,91 @@
 header {
-	position: absolute;
-	z-index: 20;
+  position: absolute;
+  z-index: 20;
 
-	width: 100%;
+  width: 100%;
 
-	& > .container {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		padding-top: 20px;
+  & > .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
 
-		& > nav {
-			width: auto;
-			height: auto;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: space-between;
-		}
-	}
+    & > nav {
+      width: auto;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      @media ($m-s) {
+        & > .hamburger {
+          display: none;
+        }
+      }
+
+	  @media ($m-xxxs) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 3) {
+        & > .hamburger {
+          display: flex;
+        }
+      }
+
+      a {
+        display: none;
+
+        @media ($m-s) {
+          display: block;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 24px;
+          text-decoration: none;
+          color: $c-gray-1;
+
+          transition: $t-main;
+
+          &:hover {
+            color: $c-black;
+            transition: $t-main;
+          }
+        }
+
+        @media ($m-xxxs) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 3) {
+          display: none;
+        }
+      }
+
+      & > .social-icons-wrapper {
+        display: none;
+
+        @media ($m-s) {
+          width: 64px;
+          height: 24px;
+
+          display: flex;
+          flex-direction: row-reverse;
+          margin-bottom: 0;
+          margin-right: 16px;
+
+          & > .social-icons__icon {
+            width: 24px;
+            height: 24px;
+
+            color: $c-gray-1;
+
+            transition: $t-main;
+
+            &:hover {
+              color: $c-black;
+              transition: $t-main;
+            }
+          }
+        }
+
+        @media ($m-xxxs) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 3) {
+          display: none;
+        }
+      }
+    }
+  }
 }
