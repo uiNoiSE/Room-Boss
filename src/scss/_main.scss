@@ -220,6 +220,11 @@ h2 {
   font-weight: 600;
   font-size: 28px;
   line-height: 36px;
+
+  @media ($m-s) {
+    font-size: 42px;
+    line-height: 44px;
+  }
 }
 
 p {

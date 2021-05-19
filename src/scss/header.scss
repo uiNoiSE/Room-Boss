@@ -40,12 +40,12 @@ header {
           font-size: 18px;
           line-height: 24px;
           text-decoration: none;
-          color: $c-gray-1;
-
+          color: $c-black;
+          
           transition: $t-main;
-
+          
           &:hover {
-            color: $c-black;
+            color: $c-gray-1;
             transition: $t-main;
           }
         }
@@ -71,12 +71,12 @@ header {
             width: 24px;
             height: 24px;
 
-            color: $c-gray-1;
-
+            color: $c-black;
+            
             transition: $t-main;
-
+            
             &:hover {
-              color: $c-black;
+              color: $c-gray-1;
               transition: $t-main;
             }
           }
