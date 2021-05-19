@@ -13,6 +13,10 @@
     width: auto;
     height: 465px;
 
+    @media ($m-s) {
+      height: 550px;
+    }
+
     picture * {
       width: auto;
       height: 100%;
@@ -144,6 +148,10 @@
     padding: 12px;
     color: #f99f3d;
 
+    @media ($m-s) {
+      padding: 6px;
+    }
+
     & > svg {
       pointer-events: none;
     }
@@ -167,6 +175,28 @@
       top: 320px;
       left: 290px;
     }
+
+    @media ($m-s) {
+      &:nth-of-type(1) {
+        top: 155px;
+        left: 413px;
+      }
+
+      &:nth-of-type(2) {
+        top: 225px;
+        left: 345px;
+      }
+
+      &:nth-of-type(3) {
+        top: 310px;
+        left: 417px;
+      }
+
+      &:nth-of-type(4) {
+        top: 380px;
+        left: 345px;
+      }
+    }
   }
 
   &__floor-and-space {
@@ -184,12 +214,23 @@
     font-weight: bold;
     font-size: 36px;
     line-height: 47px;
+
+    @media ($m-s) {
+      font-size: 42px;
+      line-height: 50px;
+      margin-right: 12px;
+    }
   }
 
   &__space {
     font-weight: normal;
     font-size: 14px;
     line-height: 20px;
+
+    @media ($m-s) {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
   &__on-sell {
@@ -198,6 +239,11 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 20px;
+
+    @media ($m-s) {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
   &__rooms {
@@ -213,6 +259,15 @@
 
       padding: 5px 11px 6px;
       background-color: $c-white;
+
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+
+      @media ($m-s) {
+        font-size: 16px;
+        line-height: 22px;
+      }
 
       &.js-disabled {
         background-color: transparentize($c-white, 0.5);
@@ -278,6 +333,11 @@
 
     pointer-events: none;
 
+    @media ($m-s) {
+      width: auto;
+      height: auto;
+    }
+
     hr {
       margin-bottom: 14px;
       height: 2px;
@@ -307,6 +367,12 @@
       opacity: 0;
 
       transition: opacity 0.4s cubic-bezier(0.28, 0, 0.1, 1);
+
+      @media ($m-s) {
+        left: calc(50% - 160px);
+        width: auto;
+        height: auto;
+      }
 
       &.__js-active {
         transition: opacity 0.4s cubic-bezier(0.28, 0, 0.1, 1) 0.4s,
