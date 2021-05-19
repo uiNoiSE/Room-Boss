@@ -9,6 +9,7 @@
     position: relative;
     z-index: 1;
     display: grid;
+    height: 100%;
 
     padding: 20px;
 
@@ -75,6 +76,15 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
+
+    @media ($m-s) {
+      display: flex;
+      align-items: flex-end;
+
+      height: 58px;
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 
   &__hr {
@@ -90,5 +100,15 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
+
+    @media ($m-s) {
+      width: 100%;
+
+      font-size: 18px;
+      line-height: 24px;
+
+      display: flex;
+      flex-grow: 1;
+    }
   }
 }

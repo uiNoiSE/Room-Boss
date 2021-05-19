@@ -61,22 +61,62 @@
     grid-template-columns: 1fr;
     row-gap: 26px;
 
+    @media ($m-s) {
+      column-gap: 48px;
+      row-gap: 70px;
+
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media ($m-s) {
+      .cards__card-bg:nth-of-type(2n) {
+        .cards__toggle {
+          transition: 0.4s cubic-bezier(0.28, 0, 0.1, 1) 0.4s;
+
+          &::after {
+            transition: 0.2s cubic-bezier(0.28, 0, 0.1, 1) 0.4s;
+          }
+        }
+      }
+    }
+
     &__card {
       width: 282px;
       height: 209px;
 
       row-gap: 11px;
+
+      @media ($m-s) {
+        width: 320px;
+        height: 100%;
+
+        grid-template-rows: auto auto auto 1fr;
+      }
     }
   }
 
   .cards__img {
     position: absolute;
-    right: 80px;
     top: -10px;
+    right: 80px;
+
+    @media ($m-s) {
+      .bubble {
+        padding: 12px;
+      }
+
+      top: -20px;
+      right: 110px;
+    }
 
     img {
       width: 40px;
       height: 40px;
+
+      @media ($m-s) {
+        width: 60px;
+        height: 60px;
+      }
     }
   }
 }
