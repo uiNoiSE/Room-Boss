@@ -9,14 +9,39 @@
     .cards {
       row-gap: 26px;
 
+      @media ($m-s) {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 48px;
+        row-gap: 30px;
+      }
+
       &__card {
         width: 282px;
 
         row-gap: 11px;
+
+        @media ($m-s) {
+          .cards__headline {
+            height: 48px;
+            align-items: flex-start;
+          }
+        }
       }
 
       .animated {
         background: $c-green;
+      }
+
+      @media ($m-s) {
+        .cards__card-bg:nth-of-type(2n) {
+          .cards__toggle {
+            transition: 0.4s cubic-bezier(0.28, 0, 0.1, 1) 0.4s;
+  
+            &::after {
+              transition: 0.2s cubic-bezier(0.28, 0, 0.1, 1) 0.4s;
+            }
+          }
+        }
       }
     }
   }
