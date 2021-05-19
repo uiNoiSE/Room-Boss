@@ -1,0 +1,336 @@
+.floors {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 40px;
+
+  &__bg {
+    position: relative;
+
+    align-self: center;
+    width: auto;
+    height: 465px;
+
+    picture * {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  & > .button {
+    align-self: center;
+    margin-top: 16px;
+  }
+
+  &__highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+
+    transition: clip-path 0.4s cubic-bezier(0.28, 0, 0.1, 1) 1s,
+      opacity 0.4s cubic-bezier(0.28, 0, 0.1, 1) 0.7s;
+
+    opacity: 0;
+
+    clip-path: polygon(
+      0% 0%,
+      25% 0%,
+      50% 0%,
+      75% 0%,
+      100% 0%,
+      100% 33%,
+      100% 66%,
+      100% 100%,
+      75% 100%,
+      50% 100%,
+      25% 100%,
+      0% 100%,
+      0% 66%,
+      0% 33%
+    );
+
+    &--1 {
+      clip-path: polygon(
+        21.1% 34.1%,
+        43.5% 20.4%,
+        57.4% 27.9%,
+        60.3% 26.3%,
+        73.6% 33.9%,
+        73.6% 36.9%,
+        76% 38.2%,
+        75.9% 49.38%,
+        73.5% 48.4%,
+        73.6% 46.3%,
+        60.3% 40.8%,
+        57.7% 41.6%,
+        43.7% 35.6%,
+        21.1% 46.2%
+      );
+    }
+
+    &--2 {
+      clip-path: polygon(
+        21.1% 45.9%,
+        43.8% 35.4%,
+        57.7% 41.3%,
+        60.2% 40.6%,
+        75.9% 47%,
+        75.9% 49.1%,
+        76.2% 49.4%,
+        76.1% 60.68%,
+        73.5% 60%,
+        73.5% 58.1%,
+        60.3% 54.4%,
+        57.6% 54.9%,
+        43.7% 50.7%,
+        21.1% 58%
+      );
+    }
+
+    &--3 {
+      clip-path: polygon(
+        21.1% 58%,
+        43.8% 50.7%,
+        57.7% 54.7%,
+        60.2% 54.2%,
+        73.6% 58.1%,
+        73.6% 59.8%,
+        76% 60.4%,
+        76.1% 72.38%,
+        73.5% 72%,
+        73.5% 70%,
+        60.3% 67.9%,
+        57.7% 68.2%,
+        43.7% 65.6%,
+        21.1% 70%
+      );
+    }
+
+    &--4 {
+      clip-path: polygon(
+        21.1% 69.8%,
+        43.8% 65.3%,
+        57.7% 67.9%,
+        60.2% 67.5%,
+        73.5% 69.8%,
+        73.5% 71.7%,
+        76% 72.1%,
+        76% 84.48%,
+        73.6% 84.4%,
+        73.6% 84.4%,
+        60.3% 84%,
+        57.7% 84%,
+        43.7% 83.7%,
+        21.1% 84.3%
+      );
+    }
+  }
+
+  &__marker {
+    position: absolute;
+    z-index: 5;
+
+    height: 50px;
+    width: 50px;
+    padding: 12px;
+    color: #f99f3d;
+
+    & > svg {
+      pointer-events: none;
+    }
+
+    &:nth-of-type(1) {
+      top: 134px;
+      left: 346px;
+    }
+
+    &:nth-of-type(2) {
+      top: 185px;
+      left: 288px;
+    }
+
+    &:nth-of-type(3) {
+      top: 262px;
+      left: 349px;
+    }
+
+    &:nth-of-type(4) {
+      top: 320px;
+      left: 290px;
+    }
+  }
+
+  &__floor-and-space {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 4px;
+
+    * {
+      width: fit-content;
+    }
+  }
+
+  &__floor {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 47px;
+  }
+
+  &__space {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__on-sell {
+    margin-bottom: 8px;
+
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__rooms {
+    display: flex;
+    justify-content: space-between;
+
+    .floors__room {
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: bold;
+      color: $c-orange;
+      border-radius: 4px;
+
+      padding: 5px 11px 6px;
+      background-color: $c-white;
+
+      &.js-disabled {
+        background-color: transparentize($c-white, 0.5);
+      }
+    }
+  }
+
+  &__cross-wrap {
+    position: absolute;
+
+    top: -12px;
+    right: -12px;
+
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+
+    pointer-events: none;
+
+    & > .floors__cross {
+      position: relative;
+
+      width: 24px;
+      height: 24px;
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: calc(50% - 1px);
+        left: calc(50% - 10px);
+
+        width: 20px;
+        height: 2px;
+        border-radius: 4px;
+        background-color: $c-white;
+
+        content: "";
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &__variants {
+    position: relative;
+
+    width: 236px;
+    height: 158px;
+    padding: 12px 22px 20px;
+
+    background-color: $c-orange;
+    border-radius: inherit;
+    border: 2px solid white;
+    box-shadow: 0px 3.18584px 79.646px rgba(128, 128, 128, 0.3);
+
+    color: $c-white;
+
+    pointer-events: none;
+
+    hr {
+      margin-bottom: 14px;
+      height: 2px;
+
+      background: $c-orange-light;
+    }
+
+    &-wrap {
+      position: absolute;
+      z-index: 10;
+      left: calc(50% - 134px);
+
+      width: 268px;
+      height: 190px;
+      padding: 16px;
+
+      border: 2px solid white;
+      border-radius: 8px;
+
+      background: linear-gradient(
+        102.05deg,
+        rgba(255, 255, 255, 0.2) 12.61%,
+        rgba(255, 255, 255, 0.3) 91.76%
+      );
+
+      pointer-events: none;
+      opacity: 0;
+
+      transition: opacity 0.4s cubic-bezier(0.28, 0, 0.1, 1);
+
+      &.__js-active {
+        transition: opacity 0.4s cubic-bezier(0.28, 0, 0.1, 1) 0.4s,
+          top 0.4s cubic-bezier(0.28, 0, 0.1, 1);
+
+        & > .floors__variants {
+          pointer-events: all;
+
+          & > .floors__cross-wrap {
+            pointer-events: inherit;
+          }
+
+          & > * {
+            pointer-events: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.__js-active {
+  transition: clip-path 0.4s cubic-bezier(0.28, 0, 0.1, 1),
+    opacity 0.4s cubic-bezier(0.28, 0, 0.1, 1) 0.1s;
+
+  opacity: 1;
+}

@@ -1,0 +1,92 @@
+.narrate {
+  background: $g-bg;
+
+  &__text {
+    margin-bottom: 55px;
+
+    & > p {
+      width: 257px;
+      margin-bottom: 16px;
+
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 24px;
+
+      @media ($m-xxxxs) and (orientation: landscape) {
+        width: 202px;
+      }
+
+      span {
+        color: $c-orange;
+      }
+    }
+  }
+
+  & > .container {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    padding-top: 58px;
+    padding-bottom: 73px;
+
+    @media ($m-xxxxs) and (orientation: landscape) {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      column-gap: 30px;
+    }
+
+    & > .bubbles--decorative {
+      position: relative;
+
+      .circle {
+        position: absolute;
+
+        &:nth-child(1) {
+          top: -30px;
+          left: auto;
+
+          margin-left: 2px;
+        }
+
+        &:nth-child(2) {
+          top: 600px;
+          left: 185px;
+
+          margin-left: 2px;
+
+          @media ($m-xxxxs) and (orientation: landscape) {
+            top: 50px;
+          }
+        }
+
+        &:nth-child(3) {
+          top: 595px;
+          left: 174px;
+
+          margin-left: 2px;
+
+          @media ($m-xxxxs) and (orientation: landscape) {
+            top: 45px;
+          }
+        }
+      }
+
+      @media ($m-xxxxs) and (orientation: landscape) {
+        order: 3;
+      }
+    }
+
+    & > .form {
+      position: relative;
+
+      & > .bubble-wrap {
+        z-index: 2;
+        top: -30px;
+        left: 123px;
+      }
+
+      align-self: center;
+    }
+  }
+}

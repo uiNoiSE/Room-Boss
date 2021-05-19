@@ -1,0 +1,154 @@
+.footer {
+  padding-top: 20px;
+  padding-bottom: 97px;
+
+  color: $c-gray-2;
+
+  background: $c-gray;
+
+  .logo {
+    grid-area: logo;
+    margin-bottom: 20px;
+  }
+
+  &__tel {
+    height: 44px;
+    grid-area: tel;
+    display: flex;
+    align-items: center;
+
+    font-weight: 500;
+
+    & > a {
+      &:active {
+        color: $c-black;
+        transition: 0.2s cubic-bezier(0.28, 0, 0.1, 1);
+      }
+    }
+  }
+
+  .social-icons {
+    &-wrapper {
+      align-self: center;
+      justify-self: flex-end;
+      grid-area: social;
+      margin-bottom: 0;
+      width: 64px;
+      height: 24px;
+    }
+
+    &__icon {
+      width: 24px;
+      height: 24px;
+
+      &:active {
+        color: $c-black;
+        transition: 0.2s cubic-bezier(0.28, 0, 0.1, 1);
+      }
+    }
+  }
+
+  &__anchors {
+    grid-area: anchors;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 10px;
+    row-gap: 20px;
+    column-gap: 16px;
+    margin-bottom: 44px;
+
+    justify-items: stretch;
+
+    display: grid;
+
+    a {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 25px;
+
+      transition: 0.2s cubic-bezier(0.28, 0, 0.1, 1);
+
+      grid-area: 2;
+
+      &:nth-child(1) {
+        grid-area: 1;
+      }
+
+      &:nth-child(2) {
+        grid-area: 1;
+      }
+
+      &:active {
+        color: $c-black;
+        transition: 0.2s cubic-bezier(0.28, 0, 0.1, 1);
+      }
+    }
+  }
+
+  &__tou {
+    margin-bottom: 26px;
+
+    font-family: $PT;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: $c-white;
+
+    grid-area: tou;
+    opacity: 0.3;
+  }
+
+  &__copy {
+    font-family: $PT;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: $c-white;
+
+    grid-area: copy;
+    align-self: center;
+    opacity: 0.3;
+  }
+
+  &__made-by {
+    width: 104px;
+    height: 26px;
+    justify-self: flex-end;
+    grid-area: made-by;
+    opacity: 0.2;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $c-gray-2;
+  }
+
+  & > .container {
+    display: grid;
+    grid-template-areas:
+      "logo logo"
+      "hr hr"
+      "tel social"
+      "hr-second hr-second"
+      "anchors anchors"
+      "tou tou"
+      "copy made-by";
+
+    color: inherit;
+
+    hr {
+      height: 2px;
+      background: $c-black;
+      grid-area: hr;
+
+      &:last-of-type {
+        grid-area: hr-second;
+      }
+    }
+  }
+}

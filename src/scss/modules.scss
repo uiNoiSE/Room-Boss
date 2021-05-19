@@ -1,0 +1,23 @@
+.modules {
+  & > .container {
+    padding-top: 40px;
+    padding-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .cards {
+      row-gap: 26px;
+
+      &__card {
+        width: 282px;
+
+        row-gap: 11px;
+      }
+
+      .animated {
+        background: $c-green;
+      }
+    }
+  }
+}

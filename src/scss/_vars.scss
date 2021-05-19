@@ -25,19 +25,22 @@ $ma-xxl: "max-width: 1599px";
 
 // Colors
 $c-black: #000000;
-$c-gray: #4B4B4B;
+$c-gray: #4b4b4b;
 $c-gray-1: #828282;
-$c-gray-2: #E7E7E9;
+$c-gray-2: #e7e7e9;
 $c-white: #ffffff;
-$c-orange: #F99F3D;
-$c-orange-light: #FBB971;
+$c-orange-light: #fbb971;
+$c-orange-dark: #ed8a1f;
+$c-orange: #f99f3d;
+$c-green: #48b452;
 
 // Fonts
-$Gilroy: 'Gilroy', Arial, ui-sans-serif;
+$Gilroy: "Gilroy", Arial, ui-sans-serif;
+$PT: "PT Root UI", Arial, ui-sans-serif;
 
 // Gradients
-$g-bg: linear-gradient(181.49deg, rgba(255, 255, 255, 0) 56.58%, #FFFFFF 98.74%), #E7E7E9;
-$g-bg-reverse: linear-gradient(181.7deg, #FFFFFF 1.44%, rgba(255, 255, 255, 0) 49.25%), #E7E7E9;
+$g-bg: linear-gradient(181.49deg, rgba(255, 255, 255, 0) 56.58%, #ffffff 98.74%), #e7e7e9;
+$g-bg-reverse: linear-gradient(181.7deg, #ffffff 1.44%, rgba(255, 255, 255, 0) 49.25%), #e7e7e9;
 
 html,
 body {

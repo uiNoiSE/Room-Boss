@@ -1,0 +1,82 @@
+.integrations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+
+  background: $g-bg-reverse;
+
+  & > .container {
+    position: relative;
+
+    .bubbles {
+      position: relative;
+      top: 0;
+      left: auto;
+
+      & > .circle,
+      .square {
+        position: absolute;
+      }
+
+      & > .circle {
+        width: 50px;
+      }
+
+      * {
+        &:nth-child(1) {
+          top: 50px;
+          right: 0px;
+        }
+
+        &:nth-child(2) {
+          top: 40px;
+          right: -7px;
+        }
+      }
+    }
+  }
+
+  .bubble-wrap {
+    border-radius: 10px;
+
+    & > .bubble {
+      border-radius: 8px;
+    }
+  }
+
+  & > .container {
+    h2 {
+      width: 247px;
+    }
+
+    p {
+      font-weight: 400;
+      margin-bottom: 24px;
+    }
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 26px;
+
+    &__card {
+      width: 282px;
+      height: 209px;
+
+      row-gap: 11px;
+    }
+  }
+
+  .cards__img {
+    position: absolute;
+    right: 80px;
+    top: -10px;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
