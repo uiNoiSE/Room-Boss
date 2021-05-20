@@ -72,6 +72,11 @@
 
         height: 0;
 
+        @media ($m-s) {
+          top: -175px;
+          right: -310px;
+        }
+
         .bubble-wrap {
           position: static;
           box-shadow: 0 2.06089px 30px hsl(0deg 0% 50% / 30%);

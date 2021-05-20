@@ -126,50 +126,10 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     } else {
       floorsMarker[n - 1].addEventListener("mouseenter", () => {
-        let cropClass = "floors__highlight";
+        floorSelect();
+      });
 
-        function floorSelect() {
-          crop.className = `${
-            cropClass + " " + cropClass + "--" + n + " __js-active"
-          }`;
-          variants.classList.add("__js-active");
-
-          switch (n) {
-            case 1:
-              space.innerText = 150;
-              onSell.innerText = 4;
-              variants.style.cssText = "top: 20%";
-              floorsRoomsAvailable.children[0].classList.remove("js-disabled");
-              floorsRoomsAvailable.children[1].classList.remove("js-disabled");
-              floorsRoomsAvailable.children[2].classList.add("js-disabled");
-              return (floorNum.innerText = 4);
-
-            case 2:
-              space.innerText = 135;
-              variants.style.cssText = "top: 30%";
-              floorsRoomsAvailable.children[0].classList.add("js-disabled");
-              floorsRoomsAvailable.children[1].classList.remove("js-disabled");
-              floorsRoomsAvailable.children[2].classList.remove("js-disabled");
-              return (floorNum.innerText = 3);
-
-            case 3:
-              space.innerText = 105;
-              variants.style.cssText = "top: 40%";
-              floorsRoomsAvailable.children[0].classList.remove("js-disabled");
-              floorsRoomsAvailable.children[1].classList.add("js-disabled");
-              floorsRoomsAvailable.children[2].classList.add("js-disabled");
-              return (floorNum.innerText = 2);
-
-            case 4:
-              space.innerText = 90;
-              variants.style.cssText = "top: 50%";
-              floorsRoomsAvailable.children[0].classList.add("js-disabled");
-              floorsRoomsAvailable.children[1].classList.remove("js-disabled");
-              floorsRoomsAvailable.children[2].classList.add("js-disabled");
-              return (floorNum.innerText = 1);
-          }
-        }
-
+      floorsMarker[n - 1].addEventListener("touchstart", () => {
         floorSelect();
       });
 
@@ -186,6 +146,50 @@ document.addEventListener("DOMContentLoaded", function () {
           crop.classList.remove("__js-active");
         }
       });
+
+      let cropClass = "floors__highlight";
+
+      function floorSelect() {
+        crop.className = `${
+          cropClass + " " + cropClass + "--" + n + " __js-active"
+        }`;
+        variants.classList.add("__js-active");
+
+        switch (n) {
+          case 1:
+            space.innerText = 150;
+            onSell.innerText = 4;
+            variants.style.cssText = "top: 20%";
+            floorsRoomsAvailable.children[0].classList.remove("js-disabled");
+            floorsRoomsAvailable.children[1].classList.remove("js-disabled");
+            floorsRoomsAvailable.children[2].classList.add("js-disabled");
+            return (floorNum.innerText = 4);
+
+          case 2:
+            space.innerText = 135;
+            variants.style.cssText = "top: 30%";
+            floorsRoomsAvailable.children[0].classList.add("js-disabled");
+            floorsRoomsAvailable.children[1].classList.remove("js-disabled");
+            floorsRoomsAvailable.children[2].classList.remove("js-disabled");
+            return (floorNum.innerText = 3);
+
+          case 3:
+            space.innerText = 105;
+            variants.style.cssText = "top: 40%";
+            floorsRoomsAvailable.children[0].classList.remove("js-disabled");
+            floorsRoomsAvailable.children[1].classList.add("js-disabled");
+            floorsRoomsAvailable.children[2].classList.add("js-disabled");
+            return (floorNum.innerText = 2);
+
+          case 4:
+            space.innerText = 90;
+            variants.style.cssText = "top: 50%";
+            floorsRoomsAvailable.children[0].classList.add("js-disabled");
+            floorsRoomsAvailable.children[1].classList.remove("js-disabled");
+            floorsRoomsAvailable.children[2].classList.add("js-disabled");
+            return (floorNum.innerText = 1);
+        }
+      }
 
       return marker(n - 1);
     }
