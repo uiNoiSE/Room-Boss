@@ -72,6 +72,11 @@
           @media ($m-xxxxs) and (orientation: landscape) {
             top: 50px;
           }
+
+          @media ($m-s) {
+            top: 30px;
+            left: 375px;
+          }
         }
 
         &:nth-child(3) {
@@ -82,6 +87,11 @@
 
           @media ($m-xxxxs) and (orientation: landscape) {
             top: 45px;
+          }
+
+          @media ($m-s) {
+            top: 25px;
+            left: 365px;
           }
         }
       }
@@ -108,7 +118,7 @@
 
           & > p {
             width: auto;
-            
+
             font-size: 15px;
             line-height: 18px;
 

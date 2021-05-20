@@ -8,6 +8,15 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 22px;
+
+      @media ($m-s) {
+        width: 440px;
+
+        font-size: 20px;
+        line-height: 28px;
+
+        margin: 0 auto;
+      }
     }
   }
 
@@ -29,22 +38,42 @@
         position: absolute;
         top: 490px;
         left: 2px;
+
+        @media ($m-s) {
+          top: 440px;
+          left: 80px;
+        }
       }
 
       & > .bubble-wrap {
         &:nth-child(1) {
           top: -20px;
           left: 13px;
+
+          @media ($m-s) {
+            top: 230px;
+            left: 70px;
+          }
         }
 
         &:nth-child(2) {
           top: 178px;
           left: 163px;
+
+          @media ($m-s) {
+            top: -50px;
+            left: 270px;
+          }
         }
 
         &:nth-child(3) {
           top: 355px;
           left: 163px;
+
+          @media ($m-s) {
+            top: 220px;
+            left: 600px;
+          }
         }
 
         box-shadow: 0px 4px 100px rgba(210, 210, 210, 0.86);
@@ -85,14 +114,20 @@
         top: 10px;
         left: 134px;
       }
+
       &__projects {
         top: 97px;
         left: 256px;
       }
+
       &__brandbooks {
         top: 177px;
         left: 16px;
       }
+    }
+
+    @media ($m-s) {
+      height: 300px;
     }
   }
 
@@ -100,6 +135,11 @@
     font-weight: bold;
     font-size: 56px;
     line-height: 73px;
+
+    @media ($m-s) {
+      font-size: 72px;
+      line-height: 80px;
+    }
   }
 
   &__text {
@@ -113,23 +153,38 @@
   &__years {
     top: 10px;
     left: 154px;
+
+    @media ($m-s) {
+      top: 70px;
+      left: 40px;
+    }
   }
 
   &__projects {
     top: 97px;
     left: 16px;
+
+    @media ($m-s) {
+      top: 145px;
+      left: 205px;
+    }
   }
 
   &__brandbooks {
     top: 277px;
     left: 16px;
+
+    @media ($m-s) {
+      top: 20px;
+      left: 440px;
+    }
   }
 
   @media ($m-xxxxs) and (orientation: landscape) {
     &__wrap {
       height: 370px;
     }
-    
+
     &__years {
       top: 10px;
       left: 134px;

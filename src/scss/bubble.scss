@@ -131,11 +131,21 @@
         &--big {
           width: 33px;
           height: 33px;
+
+          @media ($m-s) {
+            width: 54px;
+            height: 54px;
+          }
         }
 
         &--small {
           width: 19px;
           height: 19px;
+
+          @media ($m-s) {
+            width: 32px;
+            height: 32px;
+          }
         }
 
         &-nested {
