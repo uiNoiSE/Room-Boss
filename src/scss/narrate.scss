@@ -16,6 +16,13 @@
         width: 202px;
       }
 
+      @media ($m-s) {
+        width: auto;
+
+        font-size: 23px;
+        line-height: 28px;
+      }
+
       span {
         color: $c-orange;
       }
@@ -36,8 +43,15 @@
       column-gap: 30px;
     }
 
+    @media ($m-s) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 40px;
+    }
+
     & > .bubbles--decorative {
       position: relative;
+      order: 3;
 
       .circle {
         position: absolute;
@@ -79,14 +93,49 @@
 
     & > .form {
       position: relative;
+      align-self: center;
+
+      @media ($m-s) {
+        width: 320px;
+
+        & .form-inner {
+          & > input {
+            width: 100%;
+
+            font-size: 24px;
+            line-height: 32px;
+          }
+
+          & > p {
+            width: auto;
+            
+            font-size: 15px;
+            line-height: 18px;
+
+            & br {
+              display: none;
+            }
+          }
+        }
+      }
 
       & > .bubble-wrap {
         z-index: 2;
         top: -30px;
         left: 123px;
-      }
 
-      align-self: center;
+        @media ($m-s) {
+          span {
+            font-size: 20px;
+            line-height: 24px;
+          }
+
+          img {
+            width: 48px;
+            height: 48px;
+          }
+        }
+      }
     }
   }
 }
