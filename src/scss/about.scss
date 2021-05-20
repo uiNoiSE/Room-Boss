@@ -18,6 +18,11 @@
       margin-bottom: 24px;
 
       text-align: center;
+
+      @media ($m-s) {
+        font-size: 18px;
+        line-height: 24px;
+      }
     }
 
     & > .bubbles {
@@ -75,6 +80,7 @@
         grid-template:
           "cell cell cell"
           "tags tags tags";
+        column-gap: 30px;
       }
     }
   }

@@ -11,6 +11,10 @@
     rgba(255, 255, 255, 1) 100%
   );
 
+  @media ($m-s) {
+    margin-bottom: 74px;
+  }
+
   & > .container {
     position: relative;
 
@@ -46,10 +50,21 @@
   .cards {
     row-gap: 32px;
 
+    @media ($m-s) {
+      margin: 0 54px;
+      row-gap: 50px;
+    }
+
     &__card {
       padding: 24px 20px 32px;
 
       row-gap: 11px;
+
+      @media ($m-s) {
+        padding: 34px 30px 42px;
+
+        row-gap: 20px;
+      }
 
       .bubbles {
         position: relative;
@@ -72,6 +87,10 @@
       * {
         text-align: center;
 
+        @media ($m-s) {
+          text-align: left;
+        }
+
         &:not(a) {
           & > span {
             margin-bottom: 16px;
@@ -83,11 +102,33 @@
         color: $c-orange;
         font-size: 20px;
         line-height: 28px;
+
+        @media ($m-s) {
+          font-size: 32px;
+          line-height: 38px;
+        }
+      }
+
+      & > .cards__text {
+        @media ($m-s) {
+          font-size: 18px;
+          line-height: 25px;
+        }
       }
 
       & > .cards__hr {
-        &:last-child {
+        &:last-of-type {
           margin-bottom: 12px;
+        }
+
+        @media ($m-s) {
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+
+          &:first-of-type {
+            display: none;
+          }
         }
       }
 
@@ -96,6 +137,11 @@
         font-weight: 600;
         font-size: 14px;
         line-height: 28px;
+
+        @media ($m-s) {
+          font-size: 24px;
+          line-height: 50px;
+        }
       }
     }
   }

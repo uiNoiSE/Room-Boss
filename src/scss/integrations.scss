@@ -35,6 +35,10 @@
         }
       }
     }
+
+    .integrations__text-wrap {
+      min-width: 720px;
+    }
   }
 
   .bubble-wrap {
@@ -48,11 +52,23 @@
   & > .container {
     h2 {
       width: 247px;
+
+      @media ($m-s) {
+        width: 360px;
+      }
     }
 
     p {
       font-weight: 400;
       margin-bottom: 24px;
+
+      @media ($m-s) {
+        width: 520px;
+
+        font-size: 22px;
+        line-height: 28px;
+        margin-bottom: 42px;
+      }
     }
   }
 
