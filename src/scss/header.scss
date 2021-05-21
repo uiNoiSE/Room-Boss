@@ -25,7 +25,7 @@ header {
         }
       }
 
-	  @media ($m-xxxs) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 3) {
+      @media ($m-xxxs) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 3) {
         & > .hamburger {
           display: flex;
         }
@@ -41,9 +41,9 @@ header {
           line-height: 24px;
           text-decoration: none;
           color: $c-black;
-          
+
           transition: $t-main;
-          
+
           &:hover {
             color: $c-gray-1;
             transition: $t-main;
@@ -72,9 +72,9 @@ header {
             height: 24px;
 
             color: $c-black;
-            
+
             transition: $t-main;
-            
+
             &:hover {
               color: $c-gray-1;
               transition: $t-main;
@@ -86,6 +86,10 @@ header {
           display: none;
         }
       }
+    }
+
+    @media ($m-mm) {
+      padding-top: 36px;
     }
   }
 }

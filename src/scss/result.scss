@@ -1,10 +1,18 @@
 .result {
   position: relative;
 
+  @media ($m-mm) {
+    padding: 40px 0 120px;
+  }
+
   & > .container {
     position: absolute;
     left: 0;
     right: 0;
+
+    @media ($m-mm) {
+      bottom: 100px;
+    }
 
     h2 {
       margin-top: 16px;
@@ -82,7 +90,6 @@
           top: -260px;
           right: 195px;
 
-
           & > .bubble > .bubbles--decorative {
             top: 55px;
             left: -10px;
@@ -128,6 +135,18 @@
           }
         }
       }
+
+      @media ($m-mm) {
+        &:nth-child(1) {
+          top: 70px;
+          right: 330px;
+        }
+
+        &:nth-child(2) {
+          top: 230px;
+          left: 465px;
+        }
+      }
     }
   }
 
@@ -156,6 +175,7 @@
 
     @media ($m-s) {
       grid-template-columns: 60% 40%;
+      column-gap: 0%;
       .result__pic {
         & > picture {
           height: auto;
@@ -165,6 +185,10 @@
           padding-top: 70px;
         }
       }
+    }
+
+    @media ($m-mm) {
+      padding-top: 0;
     }
   }
 }

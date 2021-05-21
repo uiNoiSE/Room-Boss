@@ -16,8 +16,6 @@ body {
 .wrap {
   width: 100%;
   position: relative;
-
-  overflow-x: hidden;
 }
 
 section {
@@ -89,7 +87,7 @@ picture {
     @extend .cards__card;
 
     display: grid;
-    padding: 32px 18px 30px !important;
+    padding: 32px 18px 30px;
     row-gap: 22px;
     justify-content: center;
 
@@ -247,6 +245,11 @@ p {
   @media ($m-xxxs) and (orientation: landscape) {
     width: 52px;
     height: 35.38px;
+  }
+
+  @media ($m-mm) {
+    width: 106px;
+    height: 72px;
   }
 
   & > a {

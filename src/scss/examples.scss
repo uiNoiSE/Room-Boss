@@ -4,6 +4,8 @@
   align-items: center;
   padding: 0px 0px 52px;
 
+  overflow-x: hidden;
+
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 1) 0%,
@@ -13,6 +15,10 @@
 
   @media ($m-s) {
     margin-bottom: 74px;
+  }
+
+  @media ($m-mm) {
+    margin-bottom: 0;
   }
 
   & > .container {
@@ -42,6 +48,16 @@
         &:nth-child(3) {
           top: 21px;
           left: 0;
+        }
+      }
+    }
+
+    @media ($m-s) {
+      .examples__text-wrap {
+        width: 720px;
+        margin-bottom: 74px;
+
+        & > h2 {
         }
       }
     }

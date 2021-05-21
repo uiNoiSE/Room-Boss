@@ -54,6 +54,11 @@
             top: 230px;
             left: 70px;
           }
+
+          @media ($m-mm) {
+            top: 230px;
+            left: 145px;
+          }
         }
 
         &:nth-child(2) {
@@ -63,6 +68,11 @@
           @media ($m-s) {
             top: -50px;
             left: 270px;
+          }
+
+          @media ($m-mm) {
+            top: -60px;
+            left: 320px;
           }
         }
 
@@ -74,6 +84,12 @@
             top: 220px;
             left: 600px;
           }
+
+          @media ($m-mm) {
+            top: 225px;
+            left: auto;
+            right: 40px;
+          }
         }
 
         box-shadow: 0px 4px 100px rgba(210, 210, 210, 0.86);
@@ -83,9 +99,13 @@
         width: 50px;
         height: 50px;
       }
+
+      @media ($m-mm) {
+        width: 100%;
+      }
     }
 
-    @media ($m-xxxxs) and (orientation: landscape) {
+    @media ($m-xxxxs) and (orientation: landscape) and ($ma-s) {
       height: 370px;
 
       & > .bubbles {
@@ -140,6 +160,11 @@
       font-size: 72px;
       line-height: 80px;
     }
+
+    @media ($m-mm) {
+      font-size: 96px;
+      line-height: 120px;
+    }
   }
 
   &__text {
@@ -148,6 +173,10 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
+
+    @media ($m-mm) {
+      font-size: 24px;
+    }
   }
 
   &__years {
@@ -157,6 +186,11 @@
     @media ($m-s) {
       top: 70px;
       left: 40px;
+    }
+
+    @media ($m-mm) {
+      top: 50px;
+      left: 70px;
     }
   }
 
@@ -168,6 +202,11 @@
       top: 145px;
       left: 205px;
     }
+
+    @media ($m-mm) {
+      top: 200px;
+      left: 325px;
+    }
   }
 
   &__brandbooks {
@@ -178,9 +217,14 @@
       top: 20px;
       left: 440px;
     }
+
+    @media ($m-mm) {
+      top: 50px;
+      left: 575px;
+    }
   }
 
-  @media ($m-xxxxs) and (orientation: landscape) {
+  @media ($m-xxxxs) and (orientation: landscape) and ($ma-s) {
     &__wrap {
       height: 370px;
     }
@@ -198,6 +242,40 @@
     &__brandbooks {
       top: 177px;
       left: 16px;
+    }
+  }
+
+  @media ($m-s) {
+    &__years {
+      top: 70px;
+      left: 40px;
+    }
+
+    &__projects {
+      top: 145px;
+      left: 205px;
+    }
+
+    &__brandbooks {
+      top: 20px;
+      left: 440px;
+    }
+  }
+
+  @media ($m-mm) {
+    &__years {
+      top: 30px;
+      left: 70px;
+    }
+
+    &__projects {
+      top: 150px;
+      left: 325px;
+    }
+
+    &__brandbooks {
+      top: 30px;
+      left: 575px;
     }
   }
 }

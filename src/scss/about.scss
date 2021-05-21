@@ -12,6 +12,10 @@
       margin-bottom: 24px;
 
       text-align: center;
+
+      @media ($m-s) {
+        margin-bottom: 72px;
+      }
     }
 
     p {
@@ -72,6 +76,10 @@
           position: static;
           margin-bottom: 24px;
         }
+
+        @media ($m-s) {
+          margin-bottom: 0;
+        }
       }
 
       @media ($m-s) {
@@ -99,6 +107,7 @@
     }
 
     @media ($m-s) {
+      margin-top: 75px;
       height: 220px;
       grid-area: tags;
     }

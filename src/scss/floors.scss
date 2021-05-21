@@ -17,6 +17,10 @@
       height: 550px;
     }
 
+    @media ($m-mm) {
+      height: 100vh;
+    }
+
     picture * {
       width: auto;
       height: 100%;
@@ -26,6 +30,12 @@
   & > .button {
     align-self: center;
     margin-top: 16px;
+
+    @media ($m-mm) {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+    }
   }
 
   &__highlight {
@@ -195,6 +205,28 @@
       &:nth-of-type(4) {
         top: 380px;
         left: 345px;
+      }
+    }
+
+    @media ($m-mm) {
+      &:nth-of-type(1) {
+        top: 240px;
+        left: 587px;
+      }
+
+      &:nth-of-type(2) {
+        top: 330px;
+        left: 490px;
+      }
+
+      &:nth-of-type(3) {
+        top: 450px;
+        left: 593px;
+      }
+
+      &:nth-of-type(4) {
+        top: 545px;
+        left: 490px;
       }
     }
   }
