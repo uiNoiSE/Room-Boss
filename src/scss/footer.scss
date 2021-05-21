@@ -35,6 +35,12 @@
       margin-bottom: 0;
       width: 64px;
       height: 24px;
+
+      @media ($m-s) {
+        height: 44px;
+        align-items: center;
+        justify-self: flex-start;
+      }
     }
 
     &__icon {
@@ -51,6 +57,7 @@
   &__anchors {
     grid-area: anchors;
 
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     margin-top: 10px;
@@ -60,7 +67,16 @@
 
     justify-items: stretch;
 
-    display: grid;
+    @media ($m-s) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      column-gap: 0;
+      row-gap: 0;
+
+      margin: 0;
+    }
 
     a {
       font-weight: 500;
@@ -79,6 +95,18 @@
         grid-area: 1;
       }
 
+      @media ($m-s) {
+        grid-area: auto;
+
+        &:nth-child(1) {
+          grid-area: auto;
+        }
+
+        &:nth-child(2) {
+          grid-area: auto;
+        }
+      }
+
       &:active {
         color: $c-black;
         transition: 0.2s cubic-bezier(0.28, 0, 0.1, 1);
@@ -88,6 +116,7 @@
 
   &__tou {
     margin-bottom: 26px;
+    align-self: center;
 
     font-family: $PT;
     font-weight: 400;
@@ -97,6 +126,10 @@
 
     grid-area: tou;
     opacity: 0.3;
+
+    @media ($m-s) {
+      margin: 0;
+    }
   }
 
   &__copy {
@@ -109,14 +142,25 @@
     grid-area: copy;
     align-self: center;
     opacity: 0.3;
+
+    @media ($m-s) { 
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 
   &__made-by {
     width: 104px;
     height: 26px;
+    align-self: center;
     justify-self: flex-end;
     grid-area: made-by;
     opacity: 0.2;
+
+    @media ($m-s) {
+      width: 150px;
+      height: 40px;
+    }
 
     &:hover {
       opacity: 1;
@@ -126,6 +170,10 @@
   a {
     text-decoration: none;
     color: $c-gray-2;
+
+    @media ($m-s) {
+      font-size: 20px;
+    }
   }
 
   & > .container {
@@ -140,6 +188,18 @@
       "copy made-by";
 
     color: inherit;
+
+    @media ($m-s) {
+      grid-template-areas:
+        "logo . . ."
+        "hr . . ."
+        "tel . anchors anchors"
+        "hr-second hr-second hr-second hr-second"
+        "social . . ."
+        "copy . tou made-by";
+
+      grid-template-columns: auto 1fr 2fr 2fr;
+    }
 
     hr {
       height: 2px;
