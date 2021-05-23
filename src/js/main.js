@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (n <= 0) {
       return;
     } else {
-      floorsMarker[n - 1].addEventListener("mouseenter", () => {
+      floorsMarker[n - 1].addEventListener("mouseover", () => {
         floorSelect();
       });
 
@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
-      variants.addEventListener("mouseout", () => {
+      floorsMarker[n - 1].addEventListener("mouseout", (e) => {
         if (variants.classList.contains("__js-active")) {
           variants.classList.remove("__js-active");
           crop.classList.remove("__js-active");
@@ -211,4 +211,18 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("mousemove", parallax);
     floorsCross.remove();
   }
+
+  // scroll down button in intro section
+  let scrollDown = document.querySelector(".intro__scroll");
+  scrollDown.addEventListener("click", () => {
+    document.querySelector("#about").scrollIntoView();
+  });
+
+  // scroll to top func for footer logo
+  let footerLogo = document.querySelector("footer > .container > .logo");
+  footerLogo.addEventListener("click", () => {
+    window.scroll({
+      top: 0
+    });
+  });
 });

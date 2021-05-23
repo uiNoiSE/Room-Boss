@@ -116,6 +116,7 @@
     & > .form {
       position: relative;
       align-self: center;
+      justify-self: flex-end;
 
       @media ($m-s) {
         width: 320px;

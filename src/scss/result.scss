@@ -147,6 +147,18 @@
           left: 465px;
         }
       }
+
+      @media ($m-l) {
+        &:nth-child(1) {
+          top: 60px;
+          right: 470px;
+        }
+
+        &:nth-child(2) {
+          top: 310px;
+          left: 615px;
+        }
+      }
     }
   }
 

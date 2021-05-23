@@ -34,6 +34,13 @@
       @media ($m-mm) {
         width: 600px;
       }
+
+      @media ($m-xl) {
+        font-size: 64px;
+        line-height: 83px;
+
+        margin-bottom: 40px;
+      }
     }
 
     & > h2 {
@@ -74,10 +81,19 @@
         margin-bottom: 80px;
       }
     }
+
+    @media ($m-xl) {
+      margin-bottom: 40px;
+
+      & > h2 {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__scroll {
     position: absolute;
+    display: none;
     left: 0;
     right: 0;
     bottom: 60px;
@@ -139,6 +155,10 @@
       &:nth-of-type(2) {
         animation: blink 2s ease-in 0.4s infinite;
       }
+    }
+
+    @media ($m-s) {
+      display: block;
     }
   }
 

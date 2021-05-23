@@ -201,6 +201,10 @@
       grid-template-columns: auto 1fr 2fr 2fr;
     }
 
+    @media ($m-l) {
+      grid-template-columns: auto 1.5fr 1fr 1fr;
+    }
+
     hr {
       height: 2px;
       background: $c-black;

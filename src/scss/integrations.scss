@@ -1,18 +1,25 @@
 .integrations {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-bottom: 40px;
 
   background: $g-bg-reverse;
 
+  @media ($m-l) {
+    padding: 80px 0 100px;
+  }
+
   & > .container {
     position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .bubbles {
       position: relative;
       top: 0;
       left: auto;
+
+      width: 100%;
 
       & > .circle,
       .square {
@@ -71,6 +78,11 @@
         line-height: 28px;
         margin-bottom: 42px;
       }
+
+      @media ($m-l) {
+        width: auto;
+        padding-right: 620px;
+      }
     }
   }
 
@@ -78,6 +90,7 @@
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 26px;
+    justify-items: center;
 
     @media ($m-s) {
       column-gap: 48px;
@@ -89,10 +102,24 @@
     @media ($m-s) {
       .cards__card-bg:nth-of-type(2n) {
         .animated {
-          transition: 0.4s cubic-bezier(0.28, 0, 0.1, 1) 0.4s;
+          transition-delay: 0.4s;
 
           &::after {
-            transition: 0.2s cubic-bezier(0.28, 0, 0.1, 1) 0.4s;
+            transition-delay: 0.4s;
+          }
+        }
+      }
+    }
+
+    @media ($m-l) {
+      grid-template-columns: repeat(3, 1fr);
+
+      .cards__card-bg {
+        .animated {
+          transition-delay: 0.4s;
+
+          &::after {
+            transition-delay: 0.4s;
           }
         }
       }
@@ -103,6 +130,10 @@
       height: 209px;
 
       row-gap: 11px;
+
+      &-bg {
+        width: fit-content;
+      }
 
       @media ($m-s) {
         width: 320px;
