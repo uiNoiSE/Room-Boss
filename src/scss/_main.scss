@@ -10,7 +10,7 @@ body {
 }
 
 ._sideElemActive {
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .wrap {
@@ -56,6 +56,10 @@ section {
 
   @media ($m-xl) {
     max-width: 1320px;
+  }
+
+  @media ($m-xxxl) {
+    max-width: 1400px;
   }
 
   &--no-mw {

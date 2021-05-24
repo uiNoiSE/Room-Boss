@@ -1,6 +1,50 @@
 import Inputmask from "inputmask";
 
 document.addEventListener("DOMContentLoaded", function () {
+  var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
+
+  function preventDefault(e) {
+    e.preventDefault();
+  }
+
+  function preventDefaultForScrollKeys(e) {
+    if (keys[e.keyCode]) {
+      preventDefault(e);
+      return false;
+    }
+  }
+
+  var supportsPassive = false;
+  try {
+    window.addEventListener(
+      "test",
+      null,
+      Object.defineProperty({}, "passive", {
+        get: function () {
+          supportsPassive = true;
+        },
+      })
+    );
+  } catch (e) {}
+
+  var wheelOpt = supportsPassive ? { passive: false } : false;
+  var wheelEvent =
+    "onwheel" in document.createElement("div") ? "wheel" : "mousewheel";
+
+  function disableScroll() {
+    window.addEventListener("DOMMouseScroll", preventDefault, false); // older FF
+    window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+    window.addEventListener("touchmove", preventDefault, wheelOpt); // mobile
+    window.addEventListener("keydown", preventDefaultForScrollKeys, false);
+  }
+
+  function enableScroll() {
+    window.removeEventListener("DOMMouseScroll", preventDefault, false);
+    window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
+    window.removeEventListener("touchmove", preventDefault, wheelOpt);
+    window.removeEventListener("keydown", preventDefaultForScrollKeys, false);
+  }
+
   // burger logics
   let body = document.querySelector("body");
   let aside = document.querySelector("aside");
@@ -19,9 +63,11 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!aside.classList.contains("_active")) {
         aside.classList.toggle("_active");
         body.classList.add("_sideElemActive");
+        disableScroll();
       } else {
         body.classList.remove("_sideElemActive");
         aside.classList.toggle("_active");
+        enableScroll();
       }
     },
     false
@@ -34,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
       aside.classList.remove("_active");
       body.classList.remove("_sideElemActive");
       hamburger.classList.remove("is-active");
+      enableScroll();
     });
   });
 
@@ -42,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
     aside.classList.remove("_active");
     hamburger.classList.remove("is-active");
     body.classList.remove("_sideElemActive");
+    enableScroll();
   });
 
   // phone number formater
@@ -87,6 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
     popupButton.addEventListener("click", function () {
       popupForm.classList.add("__active");
       body.classList.add("_sideElemActive");
+      disableScroll();
     });
   });
 
@@ -95,6 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
       popupForm.classList.remove("__active");
       if (!aside.classList.contains("_active")) {
         body.classList.remove("_sideElemActive");
+        enableScroll();
       }
     }
   });
@@ -105,6 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (popupForm.classList.contains("__active")) {
         popupForm.classList.remove("__active");
         body.classList.remove("_sideElemActive");
+        enableScroll();
       }
     }
   });
@@ -222,7 +273,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let footerLogo = document.querySelector("footer > .container > .logo");
   footerLogo.addEventListener("click", () => {
     window.scroll({
-      top: 0
+      top: 0,
     });
   });
 });

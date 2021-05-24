@@ -135,6 +135,12 @@
           left: auto;
           right: 90px;
         }
+
+        @media ($m-xxxl) {
+          top: 63px;
+          left: auto;
+          right: 70px;
+        }
       }
 
       &:nth-child(8) {
@@ -150,6 +156,11 @@
         @media ($m-s) {
           top: 110px;
           left: 20px;
+        }
+
+        @media ($m-xxxl) {
+          top: 124px;
+          left: 94px;
         }
       }
 
@@ -293,6 +304,44 @@
 
         &:nth-child(5) {
           left: 460px;
+        }
+      }
+
+      @media ($m-xxxl) {
+        .bubble {
+          padding: 15px 35px;
+        }
+
+        &:nth-child(1) {
+          top: 170px;
+          left: 624px;
+        }
+
+        &:nth-child(2) {
+          top: -38px;
+          right: 95px;
+        }
+
+        &:nth-child(3) {
+          top: 170px;
+          bottom: auto;
+          right: -60px;
+        }
+
+        &:nth-child(4) {
+          top: 32px;
+          left: -62px;
+        }
+
+        &:nth-child(5) {
+          top: 32px;
+          left: 435px;
+        }
+
+        &:nth-child(6) {
+          right: auto;
+          bottom: -30px;
+          left: 180px;
         }
       }
     }

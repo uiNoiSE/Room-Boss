@@ -93,6 +93,10 @@
         margin-bottom: 0;
       }
     }
+
+    @media ($m-xxxl) {
+      margin-bottom: 80px;
+    }
   }
 
   &__scroll {
@@ -183,6 +187,10 @@
 
       @media ($m-mm) {
         top: -206px;
+      }
+
+      @media ($m-xxxl) {
+        top: -275px;
       }
 
       & > .bubble-wrap {
@@ -309,10 +317,40 @@
           }
         }
 
-        @media ($m-mm) {
+        @media ($m-l) {
           &:nth-child(2) {
             top: 96px;
             right: 500px;
+          }
+        }
+
+        @media ($m-xxxl) {
+          &:nth-child(1) {
+            top: 220px;
+          }
+
+          &:nth-child(2) {
+            top: 136px;
+            right: 570px;
+          }
+
+          &:nth-child(3) {
+            top: 530px;
+            right: 94px;
+          }
+
+          &:nth-child(4) {
+            top: 532px;
+            right: 760px;
+          }
+
+          &:nth-child(5) {
+            top: 390px;
+          }
+
+          &:nth-child(6) {
+            top: 376px;
+            right: 170px;
           }
         }
       }

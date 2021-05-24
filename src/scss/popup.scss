@@ -1,15 +1,16 @@
 .popup {
-  position: sticky;
+  position: fixed;
   top: 0;
+  bottom: 0;
   z-index: 100;
 
   display: flex;
+  flex-grow: 1;
   opacity: 0;
   width: 100%;
-  height: 100vh;
+  height: 115vh;
   align-items: center;
   justify-content: center;
-  margin-bottom: -100vh;
 
   background: rgba($color: $c-black, $alpha: 0);
 
@@ -121,30 +122,30 @@
             "business business"
             "tel tel"
             "button policy";
-
+    
           & > * {
             width: auto;
           }
-
+    
           input {
             &[type="text"] {
               &:nth-child(1) {
                 grid-area: name;
               }
-
+    
               &:nth-child(2) {
                 grid-area: business;
               }
-
+    
               &:nth-child(3) {
                 grid-area: tel;
               }
             }
-
+    
             &[type="tel"] {
               grid-area: tel;
             }
-
+    
             &[type="submit"] {
               margin-top: 0;
               grid-area: button;
@@ -153,7 +154,7 @@
               min-width: 160px;
             }
           }
-
+    
           p {
             grid-area: policy;
             height: fit-content;

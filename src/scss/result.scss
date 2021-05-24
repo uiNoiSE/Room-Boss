@@ -201,6 +201,18 @@
           left: 760px;
         }
       }
+
+      @media ($m-xxxl) {
+        &:nth-child(1) {
+          top: 180px;
+          right: 780px;
+        }
+
+        &:nth-child(2) {
+          top: 390px;
+          left: 970px;
+        }
+      }
     }
   }
 
