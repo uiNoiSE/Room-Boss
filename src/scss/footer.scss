@@ -25,6 +25,10 @@
         transition: 0.2s cubic-bezier(0.28, 0, 0.1, 1);
       }
     }
+
+    @media ($m-xl) {
+      height: 50px;
+    }
   }
 
   .social-icons {
@@ -41,11 +45,26 @@
         align-items: center;
         justify-self: flex-start;
       }
+
+      @media ($m-xl) {
+        width: 80px;
+        height: 30px;
+        margin-top: 20px;
+      }
     }
 
     &__icon {
       width: 24px;
       height: 24px;
+
+      @media ($m-xl) {
+        width: 30px;
+        height: 30px;
+
+        &:first-child {
+          margin-right: 20px;
+        }
+      }
 
       &:active {
         color: $c-black;
@@ -76,6 +95,10 @@
       row-gap: 0;
 
       margin: 0;
+    }
+
+    @media ($m-xl) {
+      height: 50px;
     }
 
     a {
@@ -143,7 +166,7 @@
     align-self: center;
     opacity: 0.3;
 
-    @media ($m-s) { 
+    @media ($m-s) {
       font-size: 20px;
       line-height: 24px;
     }
@@ -174,6 +197,10 @@
     @media ($m-s) {
       font-size: 20px;
     }
+
+    @media ($m-xl) {
+      font-size: 24px;
+    }
   }
 
   & > .container {
@@ -203,6 +230,10 @@
 
     @media ($m-l) {
       grid-template-columns: auto 1.5fr 1fr 1fr;
+    }
+
+    @media ($m-xl) {
+      grid-template-columns: auto 1.5fr 1fr 0.5fr;
     }
 
     hr {

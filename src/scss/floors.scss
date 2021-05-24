@@ -25,6 +25,10 @@
       height: 105vh;
     }
 
+    @media ($m-xxl) {
+      height: 110vh;
+    }
+
     picture * {
       width: auto;
       height: 100%;

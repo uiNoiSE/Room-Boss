@@ -21,6 +21,10 @@
       rgba(242, 242, 242, 0.75) 100%
     );
 
+    @media ($m-xxl) {
+      padding: 32px;
+    }
+
     &-bg {
       z-index: 3;
 
@@ -62,6 +66,16 @@
 
       content: "";
     }
+
+    @media ($m-xxl) {
+      width: 56px;
+      height: 32px;
+
+      &::after {
+        width: 27.2px;
+        height: 27.2px;
+      }
+    }
   }
 
   .animated {
@@ -69,6 +83,10 @@
 
     &::after {
       margin-left: 18px;
+
+      @media ($m-xxl) {
+        margin-left: 24px;
+      }
     }
   }
 
@@ -88,6 +106,11 @@
 
     @media ($m-xl) {
       font-size: 22px;
+    }
+
+    @media ($m-xxl) {
+      font-size: 24px;
+      line-height: 34px;
     }
   }
 

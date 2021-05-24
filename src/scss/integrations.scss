@@ -7,6 +7,10 @@
     padding: 80px 0 100px;
   }
 
+  @media ($m-xxl) {
+    padding: 130px 0 140px;
+  }
+
   & > .container {
     position: relative;
 
@@ -55,6 +59,14 @@
 
     & > .bubble {
       border-radius: 8px;
+
+      @media ($m-xxl) {
+        border-radius: 30px;
+      }
+    }
+
+    &--big-br {
+      border-radius: 30px;
     }
   }
 
@@ -68,6 +80,10 @@
 
       @media ($m-xl) {
         width: 550px;
+      }
+
+      @media ($m-xl) {
+        margin-bottom: 40px;
       }
     }
 
@@ -90,6 +106,10 @@
 
       @media ($m-xl) {
         padding-right: 800px;
+      }
+
+      @media ($m-xl) {
+        margin-bottom: 80px;
       }
     }
   }
@@ -147,6 +167,10 @@
       height: 209px;
 
       row-gap: 11px;
+
+      @media ($m-xxl) {
+        row-gap: 16px;
+      }
 
       &-bg {
         width: fit-content;

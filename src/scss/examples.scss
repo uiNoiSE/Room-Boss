@@ -21,6 +21,10 @@
     margin-bottom: 0;
   }
 
+  @media ($m-xxl) {
+    padding: 90px 0;
+  }
+
   & > .container {
     position: relative;
 

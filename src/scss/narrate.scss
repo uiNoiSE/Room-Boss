@@ -35,6 +35,16 @@
         line-height: 32px;
       }
 
+      @media ($m-xl) {
+        width: 550px;
+        font-size: 36px;
+        line-height: 50px;
+
+        &:first-child {
+          margin-bottom: 60px;
+        }
+      }
+
       span {
         color: $c-orange;
       }
@@ -59,6 +69,10 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 40px;
+    }
+
+    @media ($m-xl) {
+      padding: 240px 0 210px;
     }
 
     & > .bubbles--decorative {
