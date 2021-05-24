@@ -24,67 +24,173 @@
 
     transition: 0.6s cubic-bezier(0.28, 0, 0.1, 1);
 
+    @media ($m-xxs) and (orientation: landscape) {
+      width: auto;
+    }
+
+    @media ($m-s) {
+      width: 320px;
+
+      & .form-inner {
+        & > input {
+          width: 100%;
+
+          font-size: 24px;
+          line-height: 32px;
+        }
+
+        & > p {
+          width: auto;
+
+          font-size: 15px;
+          line-height: 18px;
+
+          & br {
+            display: none;
+          }
+        }
+      }
+    }
+
+    @media ($m-mm) {
+      width: 500px;
+
+      & .form-inner {
+        padding: 50px;
+      }
+    }
+
+    @media ($m-xl) {
+      width: 619px;
+      height: 515px;
+
+      & .form-inner {
+        padding: 100px 80px 92px;
+
+        & > input[name="name"] {
+          grid-area: name;
+        }
+
+        & > input[name="business"] {
+          grid-area: business;
+        }
+
+        & > input[name="phone"] {
+          grid-area: phone;
+        }
+
+        & > input[type="submit"] {
+          height: 65px;
+          grid-area: btn;
+          align-self: center;
+        }
+
+        & > p {
+          width: 280px;
+          padding-right: 30px;
+          grid-area: tou;
+          align-self: center;
+
+          font-size: 13px;
+          line-height: 15px;
+        }
+
+        column-gap: 16px;
+        grid-template-columns: 184px 253px;
+        grid-template-areas:
+          "name name"
+          "business business"
+          "phone phone"
+          "btn tou";
+      }
+    }
+
     & > .bubble-wrap {
       z-index: 2;
       top: -30px;
       right: 10px;
-    }
-  }
 
-  @media ($m-xxs) and (orientation: landscape) {
-    .form {
-      width: auto;
-
-      & > .bubble-wrap {
+      @media ($m-xxs) and (orientation: landscape) {
         top: -20px;
-      }
-    }
 
-    .form-inner {
-      padding: 28px !important;
-      column-gap: 20px;
-      grid-template-areas:
-        "name name"
-        "business business"
-        "tel tel"
-        "button policy";
+        & .form-inner {
+          padding: 28px !important;
+          column-gap: 20px;
+          grid-template-areas:
+            "name name"
+            "business business"
+            "tel tel"
+            "button policy";
 
-      & > * {
-        width: auto;
-      }
-
-      input {
-        &[type="text"] {
-          &:nth-child(1) {
-            grid-area: name;
+          & > * {
+            width: auto;
           }
 
-          &:nth-child(2) {
-            grid-area: business;
+          input {
+            &[type="text"] {
+              &:nth-child(1) {
+                grid-area: name;
+              }
+
+              &:nth-child(2) {
+                grid-area: business;
+              }
+
+              &:nth-child(3) {
+                grid-area: tel;
+              }
+            }
+
+            &[type="tel"] {
+              grid-area: tel;
+            }
+
+            &[type="submit"] {
+              margin-top: 0;
+              grid-area: button;
+              min-height: 44px;
+              width: auto;
+              min-width: 160px;
+            }
           }
 
-          &:nth-child(3) {
-            grid-area: tel;
+          p {
+            grid-area: policy;
+            height: fit-content;
+            align-self: center;
           }
-        }
-
-        &[type="tel"] {
-          grid-area: tel;
-        }
-
-        &[type="submit"] {
-          margin-top: 0;
-          grid-area: button;
-          min-height: 44px;
-          width: auto;
-          min-width: 160px;
         }
       }
 
-      p {
-        grid-area: policy;
-        height: fit-content;
-        align-self: center;
+      @media ($m-s) {
+        span {
+          font-size: 20px;
+          line-height: 24px;
+        }
+
+        img {
+          width: 48px;
+          height: 48px;
+        }
+      }
+
+      @media ($m-xl) {
+        left: auto;
+        right: 80px;
+
+        .bubble {
+          padding: 15px;
+        }
+
+        span {
+          font-size: 24px;
+          line-height: 34px;
+        }
+
+        img {
+          width: 74px;
+          height: 74px;
+        }
       }
     }
   }

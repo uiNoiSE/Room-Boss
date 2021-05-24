@@ -150,6 +150,51 @@
         }
       }
 
+      @media ($m-xl) {
+        width: 619px;
+        height: 515px;
+
+        & .form-inner {
+          padding: 100px 80px 92px;
+
+          & > input[name="name"] {
+            grid-area: name;
+          }
+
+          & > input[name="business"] {
+            grid-area: business;
+          }
+
+          & > input[name="phone"] {
+            grid-area: phone;
+          }
+
+          & > input[type="submit"] {
+            height: 65px;
+            grid-area: btn;
+            align-self: center;
+          }
+
+          & > p {
+            width: 280px;
+            padding-right: 30px;
+            grid-area: tou;
+            align-self: center;
+
+            font-size: 13px;
+            line-height: 15px;
+          }
+
+          column-gap: 16px;
+          grid-template-columns: 184px 253px;
+          grid-template-areas:
+            "name name"
+            "business business"
+            "phone phone"
+            "btn tou";
+        }
+      }
+
       & > .bubble-wrap {
         z-index: 2;
         top: -30px;
@@ -164,6 +209,25 @@
           img {
             width: 48px;
             height: 48px;
+          }
+        }
+
+        @media ($m-xl) {
+          left: auto;
+          right: 80px;
+
+          .bubble {
+            padding: 15px;
+          }
+
+          span {
+            font-size: 24px;
+            line-height: 34px;
+          }
+
+          img {
+            width: 74px;
+            height: 74px;
           }
         }
       }
