@@ -74,8 +74,9 @@
 
     @media ($m-xl) {
       width: 100%;
-      grid-template-columns: auto auto;
-      column-gap: 50px;
+      grid-template-columns: 569px 730px;
+      row-gap: 0;
+      justify-content: space-between;
     }
 
     &__card {
@@ -87,6 +88,10 @@
         padding: 34px 30px 42px;
 
         row-gap: 20px;
+      }
+
+      @media ($m-xl) {
+        grid-template-rows: 67px 75px 2px 320px auto;
       }
 
       .bubbles {
@@ -135,6 +140,11 @@
           font-size: 32px;
           line-height: 38px;
         }
+
+        @media ($m-xl) {
+          font-size: 48px;
+          line-height: 67px;
+        }
       }
 
       & > .cards__text {
@@ -161,14 +171,19 @@
       }
 
       & > .cards__subheadline {
-        font-style: normal;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 28px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        & > * {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 28px;
 
-        @media ($m-s) {
-          font-size: 24px;
-          line-height: 50px;
+          @media ($m-s) {
+            font-size: 24px;
+            line-height: 50px;
+          }
         }
       }
     }
