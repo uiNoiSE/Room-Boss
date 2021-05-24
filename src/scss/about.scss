@@ -27,6 +27,13 @@
         font-size: 18px;
         line-height: 24px;
       }
+
+      @media ($m-xl) {
+        width: 354px;
+
+        font-size: 24px;
+        line-height: 33px;
+      }
     }
 
     & > .bubbles {
@@ -283,7 +290,7 @@
         &:nth-child(1) {
           left: 485px;
         }
-        
+
         &:nth-child(5) {
           left: 460px;
         }

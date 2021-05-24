@@ -72,6 +72,12 @@
       row-gap: 50px;
     }
 
+    @media ($m-xl) {
+      width: 100%;
+      grid-template-columns: auto auto;
+      column-gap: 50px;
+    }
+
     &__card {
       padding: 24px 20px 32px;
 
@@ -172,6 +178,10 @@
     h2 {
       margin-top: 45px;
       text-align: center;
+
+      @media ($m-xl) {
+        text-align: left;
+      }
     }
   }
 }

@@ -225,6 +225,11 @@ h2 {
     font-size: 42px;
     line-height: 44px;
   }
+
+  @media ($m-xl) {
+    font-size: 64px;
+    line-height: 83px;
+  }
 }
 
 p {

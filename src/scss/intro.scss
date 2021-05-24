@@ -85,6 +85,10 @@
     @media ($m-xl) {
       margin-bottom: 40px;
 
+      & > h1 {
+        width: 750px;
+      }
+
       & > h2 {
         margin-bottom: 0;
       }
@@ -302,6 +306,13 @@
           &:nth-child(6) {
             top: 330px;
             right: 100px;
+          }
+        }
+
+        @media ($m-mm) {
+          &:nth-child(2) {
+            top: 96px;
+            right: 500px;
           }
         }
       }

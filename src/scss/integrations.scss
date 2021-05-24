@@ -65,6 +65,10 @@
       @media ($m-s) {
         width: 360px;
       }
+
+      @media ($m-xl) {
+        width: 550px;
+      }
     }
 
     p {
